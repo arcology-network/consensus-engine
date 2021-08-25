@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	p2pmocks "github.com/HPISTechnologies/consensus-engine/p2p/mocks"
-	ssproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/statesync"
-	proxymocks "github.com/HPISTechnologies/consensus-engine/proxy/mocks"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/p2p"
+	p2pmocks "github.com/arcology/consensus-engine/p2p/mocks"
+	ssproto "github.com/arcology/consensus-engine/proto/tendermint/statesync"
+	proxymocks "github.com/arcology/consensus-engine/proxy/mocks"
 )
 
 func TestReactor_Receive_ChunkRequest(t *testing.T) {

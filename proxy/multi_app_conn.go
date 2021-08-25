@@ -3,10 +3,10 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/HPISTechnologies/consensus-engine/abci/client"
-	tmlog "github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	abcicli "github.com/arcology/consensus-engine/abci/client"
+	tmlog "github.com/arcology/consensus-engine/libs/log"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/libs/service"
 )
 
 const (

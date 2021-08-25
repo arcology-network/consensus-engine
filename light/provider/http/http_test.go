@@ -9,13 +9,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/kvstore"
-	"github.com/HPISTechnologies/consensus-engine/light/provider"
-	lighthttp "github.com/HPISTechnologies/consensus-engine/light/provider/http"
-	rpcclient "github.com/HPISTechnologies/consensus-engine/rpc/client"
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
-	rpctest "github.com/HPISTechnologies/consensus-engine/rpc/test"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/abci/example/kvstore"
+	"github.com/arcology/consensus-engine/light/provider"
+	lighthttp "github.com/arcology/consensus-engine/light/provider/http"
+	rpcclient "github.com/arcology/consensus-engine/rpc/client"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	rpctest "github.com/arcology/consensus-engine/rpc/test"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestNewProvider(t *testing.T) {

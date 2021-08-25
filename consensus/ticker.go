@@ -3,8 +3,8 @@ package consensus
 import (
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/service"
 )
 
 var (

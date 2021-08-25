@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 // RegisterRPCFuncs adds a route for each function in the funcMap, as well as

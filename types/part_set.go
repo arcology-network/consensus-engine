@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/merkle"
-	"github.com/HPISTechnologies/consensus-engine/libs/bits"
-	tmbytes "github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/crypto/merkle"
+	"github.com/arcology/consensus-engine/libs/bits"
+	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
 )
 
 var (

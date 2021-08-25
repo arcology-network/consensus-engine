@@ -9,9 +9,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	ctest "github.com/HPISTechnologies/consensus-engine/libs/test"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	ctest "github.com/arcology/consensus-engine/libs/test"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
 )
 
 func makeTxs(cnt, size int) Txs {

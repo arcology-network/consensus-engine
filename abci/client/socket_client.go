@@ -10,11 +10,11 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmnet "github.com/HPISTechnologies/consensus-engine/libs/net"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/libs/timer"
+	"github.com/arcology/consensus-engine/abci/types"
+	tmnet "github.com/arcology/consensus-engine/libs/net"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/libs/timer"
 )
 
 const (

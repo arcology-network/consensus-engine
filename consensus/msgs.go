@@ -6,13 +6,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cstypes "github.com/HPISTechnologies/consensus-engine/consensus/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/bits"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmcons "github.com/HPISTechnologies/consensus-engine/proto/tendermint/consensus"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	cstypes "github.com/arcology/consensus-engine/consensus/types"
+	"github.com/arcology/consensus-engine/libs/bits"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	"github.com/arcology/consensus-engine/p2p"
+	tmcons "github.com/arcology/consensus-engine/proto/tendermint/consensus"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // MsgToProto takes a consensus message type and returns the proto defined consensus message

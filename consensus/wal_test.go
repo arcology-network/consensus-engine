@@ -14,12 +14,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/consensus/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto/merkle"
-	"github.com/HPISTechnologies/consensus-engine/libs/autofile"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmtypes "github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	"github.com/arcology/consensus-engine/consensus/types"
+	"github.com/arcology/consensus-engine/crypto/merkle"
+	"github.com/arcology/consensus-engine/libs/autofile"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmtypes "github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 const (

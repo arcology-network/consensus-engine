@@ -7,7 +7,7 @@ import (
 
 	secp256k1 "github.com/btcsuite/btcd/btcec"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto"
 )
 
 // used to reject malleable signatures

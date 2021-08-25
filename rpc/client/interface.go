@@ -23,10 +23,10 @@ implementation.
 import (
 	"context"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	"github.com/arcology/consensus-engine/libs/service"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Client wraps most important rpc calls a client would make if you want to

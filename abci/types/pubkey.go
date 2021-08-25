@@ -3,9 +3,9 @@ package types
 import (
 	fmt "fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
-	"github.com/HPISTechnologies/consensus-engine/crypto/secp256k1"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
+	"github.com/arcology/consensus-engine/crypto/secp256k1"
 )
 
 func Ed25519ValidatorUpdate(pk []byte, power int64) ValidatorUpdate {

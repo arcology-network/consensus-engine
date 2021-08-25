@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/p2p"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 // NetInfo returns network info.

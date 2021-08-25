@@ -5,14 +5,14 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/behaviour"
-	bc "github.com/HPISTechnologies/consensus-engine/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	bcproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/blockchain"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/store"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/behaviour"
+	bc "github.com/arcology/consensus-engine/blockchain"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/p2p"
+	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/store"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (

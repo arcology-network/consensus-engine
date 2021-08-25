@@ -8,16 +8,16 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	memmock "github.com/HPISTechnologies/consensus-engine/mempool/mock"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/state/mocks"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	"github.com/arcology/consensus-engine/libs/log"
+	memmock "github.com/arcology/consensus-engine/mempool/mock"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/state/mocks"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 const validationTestsStopHeight int64 = 10

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
 )
 
 //-------------------------------------------

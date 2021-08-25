@@ -8,11 +8,11 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmlog "github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmnet "github.com/HPISTechnologies/consensus-engine/libs/net"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/abci/types"
+	tmlog "github.com/arcology/consensus-engine/libs/log"
+	tmnet "github.com/arcology/consensus-engine/libs/net"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 // var maxNumberConnections = 2

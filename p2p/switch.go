@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/cmap"
-	"github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
+	"github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/cmap"
+	"github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/p2p/conn"
 )
 
 const (
@@ -366,7 +366,7 @@ func (sw *Switch) stopAndRemovePeer(peer Peer, reason interface{}) {
 	// Removing a peer should go last to avoid a situation where a peer
 	// reconnect to our node and the switch calls InitPeer before
 	// RemovePeer is finished.
-	// https://github.com/HPISTechnologies/consensus-engine/issues/3338
+	// https://github.com/arcology/consensus-engine/issues/3338
 	if sw.peers.Remove(peer) {
 		sw.metrics.Peers.Add(float64(-1))
 	}

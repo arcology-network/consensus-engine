@@ -16,12 +16,12 @@ import (
 
 	"github.com/minio/highwayhash"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/crypto"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/p2p"
 )
 
 const (

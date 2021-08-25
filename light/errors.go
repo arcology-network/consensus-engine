@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // ErrOldHeaderExpired means the old (trusted) header has expired according to

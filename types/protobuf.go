@@ -1,12 +1,12 @@
 package types
 
 import (
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
-	"github.com/HPISTechnologies/consensus-engine/crypto/secp256k1"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
+	"github.com/arcology/consensus-engine/crypto/secp256k1"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
 )
 
 //-------------------------------------------------------

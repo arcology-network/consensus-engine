@@ -16,8 +16,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	types "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 type sampleResult struct {

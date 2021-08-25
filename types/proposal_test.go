@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	"github.com/HPISTechnologies/consensus-engine/libs/protoio"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	"github.com/arcology/consensus-engine/libs/protoio"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
 )
 
 var (

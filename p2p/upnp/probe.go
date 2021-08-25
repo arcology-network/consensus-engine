@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 type Capabilities struct {

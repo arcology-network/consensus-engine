@@ -7,8 +7,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 //---------------------------------------------------------------------------------------

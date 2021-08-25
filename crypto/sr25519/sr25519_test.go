@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/sr25519"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/sr25519"
 )
 
 func TestSignAndValidateSr25519(t *testing.T) {

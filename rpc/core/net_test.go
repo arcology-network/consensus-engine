@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/p2p"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 func TestUnsafeDialSeeds(t *testing.T) {

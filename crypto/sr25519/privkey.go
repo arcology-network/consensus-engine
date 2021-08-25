@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto"
 
 	schnorrkel "github.com/ChainSafe/go-schnorrkel"
 )

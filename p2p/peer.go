@@ -5,11 +5,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/cmap"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/libs/cmap"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/service"
 
-	tmconn "github.com/HPISTechnologies/consensus-engine/p2p/conn"
+	tmconn "github.com/arcology/consensus-engine/p2p/conn"
 )
 
 //go:generate mockery --case underscore --name Peer

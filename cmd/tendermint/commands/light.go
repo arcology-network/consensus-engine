@@ -16,16 +16,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/merkle"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/light"
-	lproxy "github.com/HPISTechnologies/consensus-engine/light/proxy"
-	lrpc "github.com/HPISTechnologies/consensus-engine/light/rpc"
-	dbs "github.com/HPISTechnologies/consensus-engine/light/store/db"
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
-	rpcserver "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/server"
+	"github.com/arcology/consensus-engine/crypto/merkle"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/light"
+	lproxy "github.com/arcology/consensus-engine/light/proxy"
+	lrpc "github.com/arcology/consensus-engine/light/rpc"
+	dbs "github.com/arcology/consensus-engine/light/store/db"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	rpcserver "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
 )
 
 // LightCmd represents the base command when called without any subcommands
@@ -215,7 +215,7 @@ func runProxy(cmd *cobra.Command, args []string) error {
 	cfg.MaxOpenConnections = maxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/HPISTechnologies/consensus-engine/issues/3435
+	// See https://github.com/arcology/consensus-engine/issues/3435
 	if cfg.WriteTimeout <= config.RPC.TimeoutBroadcastTxCommit {
 		cfg.WriteTimeout = config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

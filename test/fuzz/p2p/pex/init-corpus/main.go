@@ -10,9 +10,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmp2p "github.com/HPISTechnologies/consensus-engine/proto/tendermint/p2p"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/p2p"
+	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
 )
 
 func main() {

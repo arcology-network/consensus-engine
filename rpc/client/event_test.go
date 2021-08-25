@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/rpc/client"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/rpc/client"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 var waitForEventTimeout = 8 * time.Second

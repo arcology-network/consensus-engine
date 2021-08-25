@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 func TestTrustMetricStoreSaveLoad(t *testing.T) {

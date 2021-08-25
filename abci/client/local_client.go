@@ -1,9 +1,9 @@
 package abcicli
 
 import (
-	types "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	types "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 var _ Client = (*localClient)(nil)

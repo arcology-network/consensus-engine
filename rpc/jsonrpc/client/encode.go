@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"reflect"
 
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
 )
 
 func argsToURLValues(args map[string]interface{}) (url.Values, error) {

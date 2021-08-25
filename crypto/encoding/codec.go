@@ -3,11 +3,11 @@ package encoding
 import (
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/crypto/secp256k1"
-	"github.com/HPISTechnologies/consensus-engine/libs/json"
-	pc "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/crypto/secp256k1"
+	"github.com/arcology/consensus-engine/libs/json"
+	pc "github.com/arcology/consensus-engine/proto/tendermint/crypto"
 )
 
 func init() {

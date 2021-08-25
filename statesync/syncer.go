@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	ssproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/statesync"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/p2p"
+	ssproto "github.com/arcology/consensus-engine/proto/tendermint/statesync"
+	"github.com/arcology/consensus-engine/proxy"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (

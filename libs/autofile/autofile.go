@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
 )
 
 /* AutoFile usage

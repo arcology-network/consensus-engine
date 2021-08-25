@@ -3,8 +3,8 @@ package mock
 import (
 	"context"
 
-	"github.com/HPISTechnologies/consensus-engine/rpc/client"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
+	"github.com/arcology/consensus-engine/rpc/client"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
 )
 
 // StatusMock returns the result specified by the Call

@@ -13,17 +13,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	mempl "github.com/HPISTechnologies/consensus-engine/mempool"
-	"github.com/HPISTechnologies/consensus-engine/rpc/client"
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
-	rpclocal "github.com/HPISTechnologies/consensus-engine/rpc/client/local"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpcclient "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/client"
-	rpctest "github.com/HPISTechnologies/consensus-engine/rpc/test"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	mempl "github.com/arcology/consensus-engine/mempool"
+	"github.com/arcology/consensus-engine/rpc/client"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	rpclocal "github.com/arcology/consensus-engine/rpc/client/local"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpcclient "github.com/arcology/consensus-engine/rpc/jsonrpc/client"
+	rpctest "github.com/arcology/consensus-engine/rpc/test"
+	"github.com/arcology/consensus-engine/types"
 )
 
 var (

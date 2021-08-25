@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
 )
 
 // BlockMeta contains meta information.

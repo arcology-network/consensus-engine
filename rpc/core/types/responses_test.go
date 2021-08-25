@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/HPISTechnologies/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p"
 )
 
 func TestStatusIndexer(t *testing.T) {

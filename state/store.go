@@ -7,18 +7,18 @@ import (
 	"github.com/gogo/protobuf/proto"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	tmstate "github.com/HPISTechnologies/consensus-engine/proto/tendermint/state"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (
 	// persist validators every valSetCheckpointInterval blocks to avoid
 	// LoadValidators taking too much time.
-	// https://github.com/HPISTechnologies/consensus-engine/pull/3438
+	// https://github.com/arcology/consensus-engine/pull/3438
 	// 100000 results in ~ 100ms to get 100 validators (see BenchmarkLoadValidators)
 	valSetCheckpointInterval = 100000
 )
@@ -218,7 +218,7 @@ func (store dbStore) Bootstrap(state State) error {
 // e.g. `LastHeightChanged` must remain. The state at to must also exist.
 //
 // The from parameter is necessary since we can't do a key scan in a performant way due to the key
-// encoding not preserving ordering: https://github.com/HPISTechnologies/consensus-engine/issues/4567
+// encoding not preserving ordering: https://github.com/arcology/consensus-engine/issues/4567
 // This will cause some old states to be left behind when doing incremental partial prunes,
 // specifically older checkpoints and LastHeightChanged targets.
 func (store dbStore) PruneStates(from int64, to int64) error {

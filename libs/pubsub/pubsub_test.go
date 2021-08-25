@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/log"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/pubsub"
-	"github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
+	"github.com/arcology/consensus-engine/libs/pubsub"
+	"github.com/arcology/consensus-engine/libs/pubsub/query"
 )
 
 const (

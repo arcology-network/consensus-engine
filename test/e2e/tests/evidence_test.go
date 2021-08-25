@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/HPISTechnologies/consensus-engine/test/e2e/pkg"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // assert that all nodes that have blocks at the height of a misbehavior has evidence

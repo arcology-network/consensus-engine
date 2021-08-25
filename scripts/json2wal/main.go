@@ -14,9 +14,9 @@ import (
 	"os"
 	"strings"
 
-	cs "github.com/HPISTechnologies/consensus-engine/consensus"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	cs "github.com/arcology/consensus-engine/consensus"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func main() {

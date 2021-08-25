@@ -1,9 +1,9 @@
 package mock
 
 import (
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p/conn"
 )
 
 type Reactor struct {

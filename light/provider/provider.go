@@ -3,7 +3,7 @@ package provider
 import (
 	"context"
 
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Provider provides information for the light client to sync (verification

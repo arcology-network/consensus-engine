@@ -4,8 +4,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/code"
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/abci/example/code"
+	"github.com/arcology/consensus-engine/abci/types"
 )
 
 type Application struct {

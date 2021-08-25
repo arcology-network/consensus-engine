@@ -3,10 +3,10 @@ package core
 import (
 	"fmt"
 
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // BlockchainInfo gets block headers for minHeight <= height <= maxHeight.

@@ -3,10 +3,10 @@ package types
 import (
 	"fmt"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmpubsub "github.com/HPISTechnologies/consensus-engine/libs/pubsub"
-	tmquery "github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
+	tmquery "github.com/arcology/consensus-engine/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

@@ -10,7 +10,7 @@ import (
 	"math"
 	"time"
 
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 // Monitor monitors and limits the transfer rate of a data stream.

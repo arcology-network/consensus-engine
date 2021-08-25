@@ -5,13 +5,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/privval"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	cfg "github.com/arcology/consensus-engine/config"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/privval"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 // InitFilesCmd initialises a fresh Tendermint Core instance.

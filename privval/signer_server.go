@@ -3,10 +3,10 @@ package privval
 import (
 	"io"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	privvalproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/privval"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	privvalproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

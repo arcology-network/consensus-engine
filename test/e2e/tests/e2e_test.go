@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	e2e "github.com/HPISTechnologies/consensus-engine/test/e2e/pkg"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	rpctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func init() {

@@ -1,8 +1,8 @@
 package core
 
 import (
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 // UnsafeFlushMempool removes all transactions from the mempool.

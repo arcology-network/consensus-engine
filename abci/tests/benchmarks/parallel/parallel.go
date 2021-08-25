@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmnet "github.com/HPISTechnologies/consensus-engine/libs/net"
+	"github.com/arcology/consensus-engine/abci/types"
+	tmnet "github.com/arcology/consensus-engine/libs/net"
 )
 
 func main() {

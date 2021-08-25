@@ -18,11 +18,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
+	"github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/p2p/conn"
 )
 
 var (

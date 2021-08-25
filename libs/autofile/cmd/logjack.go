@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	auto "github.com/HPISTechnologies/consensus-engine/libs/autofile"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
+	auto "github.com/arcology/consensus-engine/libs/autofile"
+	tmos "github.com/arcology/consensus-engine/libs/os"
 )
 
 const Version = "0.0.1"

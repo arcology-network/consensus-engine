@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/behaviour"
-	bc "github.com/HPISTechnologies/consensus-engine/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	bcproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/behaviour"
+	bc "github.com/arcology/consensus-engine/blockchain"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/p2p"
+	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
+	"github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (

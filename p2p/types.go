@@ -1,7 +1,7 @@
 package p2p
 
 import (
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
+	"github.com/arcology/consensus-engine/p2p/conn"
 )
 
 type ChannelDescriptor = conn.ChannelDescriptor

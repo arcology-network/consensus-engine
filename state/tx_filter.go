@@ -1,8 +1,8 @@
 package state
 
 import (
-	mempl "github.com/HPISTechnologies/consensus-engine/mempool"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	mempl "github.com/arcology/consensus-engine/mempool"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // TxPreCheck returns a function to filter transactions before processing.

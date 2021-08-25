@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	types "github.com/HPISTechnologies/consensus-engine/types"
+	types "github.com/arcology/consensus-engine/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

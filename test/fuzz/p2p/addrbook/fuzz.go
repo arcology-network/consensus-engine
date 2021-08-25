@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/p2p/pex"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p/pex"
 )
 
 var addrBook = pex.NewAddrBook("./testdata/addrbook.json", true)

@@ -7,16 +7,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmpubsub "github.com/HPISTechnologies/consensus-engine/libs/pubsub"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	rpcclient "github.com/HPISTechnologies/consensus-engine/rpc/client"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	jsonrpcclient "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/client"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	rpcclient "github.com/arcology/consensus-engine/rpc/client"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	jsonrpcclient "github.com/arcology/consensus-engine/rpc/jsonrpc/client"
+	"github.com/arcology/consensus-engine/types"
 )
 
 /*

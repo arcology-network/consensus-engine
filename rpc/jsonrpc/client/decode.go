@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	types "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 func unmarshalResponseBytes(

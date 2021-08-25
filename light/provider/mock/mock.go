@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/HPISTechnologies/consensus-engine/light/provider"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/light/provider"
+	"github.com/arcology/consensus-engine/types"
 )
 
 type Mock struct {

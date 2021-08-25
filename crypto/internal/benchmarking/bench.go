@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto"
 )
 
 // The code in this file is adapted from agl/ed25519.

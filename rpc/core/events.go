@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	tmpubsub "github.com/HPISTechnologies/consensus-engine/libs/pubsub"
-	tmquery "github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
+	tmquery "github.com/arcology/consensus-engine/libs/pubsub/query"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 const (

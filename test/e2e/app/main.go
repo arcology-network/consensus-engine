@@ -10,18 +10,18 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/server"
-	"github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	tmflags "github.com/HPISTechnologies/consensus-engine/libs/cli/flags"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmnet "github.com/HPISTechnologies/consensus-engine/libs/net"
-	"github.com/HPISTechnologies/consensus-engine/node"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/privval"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	mcs "github.com/HPISTechnologies/consensus-engine/test/maverick/consensus"
-	maverick "github.com/HPISTechnologies/consensus-engine/test/maverick/node"
+	"github.com/arcology/consensus-engine/abci/server"
+	"github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	tmflags "github.com/arcology/consensus-engine/libs/cli/flags"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmnet "github.com/arcology/consensus-engine/libs/net"
+	"github.com/arcology/consensus-engine/node"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/privval"
+	"github.com/arcology/consensus-engine/proxy"
+	mcs "github.com/arcology/consensus-engine/test/maverick/consensus"
+	maverick "github.com/arcology/consensus-engine/test/maverick/node"
 )
 
 var logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))

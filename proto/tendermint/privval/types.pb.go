@@ -5,8 +5,8 @@ package privval
 
 import (
 	fmt "fmt"
-	crypto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
-	types "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	crypto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
+	types "github.com/arcology/consensus-engine/proto/tendermint/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	io "io"

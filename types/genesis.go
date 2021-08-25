@@ -8,12 +8,12 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	tmbytes "github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	"github.com/arcology/consensus-engine/crypto"
+	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 const (

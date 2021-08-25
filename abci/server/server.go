@@ -11,8 +11,8 @@ package server
 import (
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/service"
 )
 
 func NewServer(protoAddr, transport string, app types.Application) (service.Service, error) {

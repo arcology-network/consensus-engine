@@ -4,8 +4,8 @@ import (
 	"sync"
 	"testing"
 
-	bh "github.com/HPISTechnologies/consensus-engine/behaviour"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
+	bh "github.com/arcology/consensus-engine/behaviour"
+	"github.com/arcology/consensus-engine/p2p"
 )
 
 // TestMockReporter tests the MockReporter's ability to store reported

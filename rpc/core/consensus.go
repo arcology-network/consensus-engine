@@ -1,11 +1,11 @@
 package core
 
 import (
-	cm "github.com/HPISTechnologies/consensus-engine/consensus"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	cm "github.com/arcology/consensus-engine/consensus"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Validators gets the validator set at the given block height.

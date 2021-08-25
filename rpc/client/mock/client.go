@@ -18,13 +18,13 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	"github.com/HPISTechnologies/consensus-engine/rpc/client"
-	"github.com/HPISTechnologies/consensus-engine/rpc/core"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/rpc/client"
+	"github.com/arcology/consensus-engine/rpc/core"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Client wraps arbitrary implementations of the various interfaces.

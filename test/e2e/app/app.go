@@ -8,10 +8,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/code"
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/version"
+	"github.com/arcology/consensus-engine/abci/example/code"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/version"
 )
 
 // Application is an ABCI application for use by end-to-end tests. It is a

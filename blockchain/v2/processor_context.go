@@ -3,8 +3,8 @@ package v2
 import (
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 type processorContext interface {

@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"time"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/consensus"
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	mempl "github.com/HPISTechnologies/consensus-engine/mempool"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/state/txindex"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/consensus"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/libs/log"
+	mempl "github.com/arcology/consensus-engine/mempool"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/proxy"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/state/txindex"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (

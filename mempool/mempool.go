@@ -3,9 +3,9 @@ package mempool
 import (
 	"fmt"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Mempool defines the mempool interface.

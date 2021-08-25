@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	types "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 const (

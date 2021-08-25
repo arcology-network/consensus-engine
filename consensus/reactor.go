@@ -9,18 +9,18 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cstypes "github.com/HPISTechnologies/consensus-engine/consensus/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/bits"
-	tmevents "github.com/HPISTechnologies/consensus-engine/libs/events"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmcons "github.com/HPISTechnologies/consensus-engine/proto/tendermint/consensus"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	cstypes "github.com/arcology/consensus-engine/consensus/types"
+	"github.com/arcology/consensus-engine/libs/bits"
+	tmevents "github.com/arcology/consensus-engine/libs/events"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/p2p"
+	tmcons "github.com/arcology/consensus-engine/proto/tendermint/consensus"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 const (

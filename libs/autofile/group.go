@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/libs/service"
 )
 
 const (

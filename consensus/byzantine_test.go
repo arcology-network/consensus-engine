@@ -14,18 +14,18 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abcicli "github.com/HPISTechnologies/consensus-engine/abci/client"
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/evidence"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	mempl "github.com/HPISTechnologies/consensus-engine/mempool"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/store"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abcicli "github.com/arcology/consensus-engine/abci/client"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/evidence"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	mempl "github.com/arcology/consensus-engine/mempool"
+	"github.com/arcology/consensus-engine/p2p"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/store"
+	"github.com/arcology/consensus-engine/types"
 )
 
 //----------------------------------------------

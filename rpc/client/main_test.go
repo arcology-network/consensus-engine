@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/kvstore"
-	nm "github.com/HPISTechnologies/consensus-engine/node"
-	rpctest "github.com/HPISTechnologies/consensus-engine/rpc/test"
+	"github.com/arcology/consensus-engine/abci/example/kvstore"
+	nm "github.com/arcology/consensus-engine/node"
+	rpctest "github.com/arcology/consensus-engine/rpc/test"
 )
 
 var node *nm.Node

@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	"github.com/arcology/consensus-engine/crypto"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 func TestVoteSet_AddVote_Good(t *testing.T) {

@@ -13,9 +13,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/cli"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/cli"
+	tmos "github.com/arcology/consensus-engine/libs/os"
 )
 
 var (

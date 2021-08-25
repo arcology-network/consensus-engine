@@ -10,15 +10,15 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmstate "github.com/HPISTechnologies/consensus-engine/proto/tendermint/state"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestStoreLoadValidators(t *testing.T) {

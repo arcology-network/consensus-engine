@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	types "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 func TestParseJSONMap(t *testing.T) {

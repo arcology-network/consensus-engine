@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	abcicli "github.com/HPISTechnologies/consensus-engine/abci/client"
+	abcicli "github.com/arcology/consensus-engine/abci/client"
 	mock "github.com/stretchr/testify/mock"
 )
 

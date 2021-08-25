@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	types "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 const (

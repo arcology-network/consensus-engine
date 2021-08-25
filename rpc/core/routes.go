@@ -1,7 +1,7 @@
 package core
 
 import (
-	rpc "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/server"
+	rpc "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
 )
 
 // TODO: better system than "unsafe" prefix

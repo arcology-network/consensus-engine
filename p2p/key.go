@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmos "github.com/arcology/consensus-engine/libs/os"
 )
 
 // ID is a hex-encoded crypto.Address

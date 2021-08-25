@@ -11,13 +11,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 func TestGenLoadValidator(t *testing.T) {

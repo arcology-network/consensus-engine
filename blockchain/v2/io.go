@@ -3,11 +3,11 @@ package v2
 import (
 	"fmt"
 
-	bc "github.com/HPISTechnologies/consensus-engine/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	bcproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	bc "github.com/arcology/consensus-engine/blockchain"
+	"github.com/arcology/consensus-engine/p2p"
+	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
+	"github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 type iIO interface {

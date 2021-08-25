@@ -3,12 +3,12 @@ package consensus
 import (
 	"testing"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/p2p"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 //----------------------------------------------

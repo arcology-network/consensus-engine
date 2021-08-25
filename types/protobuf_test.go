@@ -6,10 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
 )
 
 func TestABCIPubKey(t *testing.T) {

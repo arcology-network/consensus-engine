@@ -5,12 +5,12 @@ import (
 	"os"
 	"testing"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 var config *cfg.Config // NOTE: must be reset for each _test.go file

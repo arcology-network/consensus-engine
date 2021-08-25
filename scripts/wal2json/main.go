@@ -12,8 +12,8 @@ import (
 	"io"
 	"os"
 
-	cs "github.com/HPISTechnologies/consensus-engine/consensus"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
+	cs "github.com/arcology/consensus-engine/consensus"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package merkle
 
 import (
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
 )
 
 // TODO: make these have a large predefined capacity

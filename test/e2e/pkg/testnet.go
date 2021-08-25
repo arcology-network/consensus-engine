@@ -12,11 +12,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/crypto/secp256k1"
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
-	mcs "github.com/HPISTechnologies/consensus-engine/test/maverick/consensus"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/crypto/secp256k1"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	mcs "github.com/arcology/consensus-engine/test/maverick/consensus"
 )
 
 const (

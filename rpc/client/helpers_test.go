@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/rpc/client"
-	"github.com/HPISTechnologies/consensus-engine/rpc/client/mock"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
+	"github.com/arcology/consensus-engine/rpc/client"
+	"github.com/arcology/consensus-engine/rpc/client/mock"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
 )
 
 func TestWaitForHeight(t *testing.T) {

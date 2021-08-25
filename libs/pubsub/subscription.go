@@ -3,7 +3,7 @@ package pubsub
 import (
 	"errors"
 
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 var (

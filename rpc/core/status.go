@@ -3,11 +3,11 @@ package core
 import (
 	"time"
 
-	tmbytes "github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
+	"github.com/arcology/consensus-engine/p2p"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Status returns Tendermint status including node info, pubkey, latest block

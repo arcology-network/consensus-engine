@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/libs/rand"
 )
 
 // TestAddListenerForEventFireOnce sets up an EventSwitch, subscribes a single

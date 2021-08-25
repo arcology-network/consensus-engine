@@ -9,16 +9,16 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	tmbytes "github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/libs/protoio"
-	"github.com/HPISTechnologies/consensus-engine/libs/tempfile"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/libs/protoio"
+	"github.com/arcology/consensus-engine/libs/tempfile"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 // TODO: type ?

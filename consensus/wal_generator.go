@@ -11,15 +11,15 @@ import (
 
 	db "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/kvstore"
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/privval"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/store"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/abci/example/kvstore"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/privval"
+	"github.com/arcology/consensus-engine/proxy"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/store"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a

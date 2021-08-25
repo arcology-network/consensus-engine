@@ -1,7 +1,7 @@
 package cmap
 
 import (
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 // CMap is a goroutine-safe map

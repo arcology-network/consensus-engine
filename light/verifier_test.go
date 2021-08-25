@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	"github.com/HPISTechnologies/consensus-engine/light"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	"github.com/arcology/consensus-engine/light"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	abcicli "github.com/HPISTechnologies/consensus-engine/abci/client"
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	abcicli "github.com/arcology/consensus-engine/abci/client"
+	"github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 func startClient(abciType string) abcicli.Client {

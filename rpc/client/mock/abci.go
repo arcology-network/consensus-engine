@@ -3,12 +3,12 @@ package mock
 import (
 	"context"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	"github.com/HPISTechnologies/consensus-engine/rpc/client"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	"github.com/arcology/consensus-engine/proxy"
+	"github.com/arcology/consensus-engine/rpc/client"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // ABCIApp will send all abci related request to the named app,

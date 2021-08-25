@@ -3,10 +3,10 @@ package mock
 import (
 	"net"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p/conn"
 )
 
 type Peer struct {

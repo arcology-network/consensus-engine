@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmpubsub "github.com/HPISTechnologies/consensus-engine/libs/pubsub"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
+	"github.com/arcology/consensus-engine/libs/service"
 )
 
 const defaultCapacity = 0

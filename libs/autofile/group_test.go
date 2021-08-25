@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
 )
 
 func createTestGroupWithHeadSizeLimit(t *testing.T, headSizeLimit int64) *Group {

@@ -3,12 +3,12 @@ package privval
 import (
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
-	cryptoproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
-	privvalproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/privval"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/crypto"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
+	cryptoproto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
+	privvalproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func DefaultValidationRequestHandler(

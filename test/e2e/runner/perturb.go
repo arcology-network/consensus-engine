@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	e2e "github.com/HPISTechnologies/consensus-engine/test/e2e/pkg"
+	rpctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
 )
 
 // Perturbs a running testnet.

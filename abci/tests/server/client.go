@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	abcicli "github.com/HPISTechnologies/consensus-engine/abci/client"
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
+	abcicli "github.com/arcology/consensus-engine/abci/client"
+	"github.com/arcology/consensus-engine/abci/types"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
 )
 
 func InitChain(client abcicli.Client) error {

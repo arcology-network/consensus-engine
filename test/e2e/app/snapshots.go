@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
 )
 
 const (

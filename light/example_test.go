@@ -11,13 +11,13 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/kvstore"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/light"
-	"github.com/HPISTechnologies/consensus-engine/light/provider"
-	httpp "github.com/HPISTechnologies/consensus-engine/light/provider/http"
-	dbs "github.com/HPISTechnologies/consensus-engine/light/store/db"
-	rpctest "github.com/HPISTechnologies/consensus-engine/rpc/test"
+	"github.com/arcology/consensus-engine/abci/example/kvstore"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/light"
+	"github.com/arcology/consensus-engine/light/provider"
+	httpp "github.com/arcology/consensus-engine/light/provider/http"
+	dbs "github.com/arcology/consensus-engine/light/store/db"
+	rpctest "github.com/arcology/consensus-engine/rpc/test"
 )
 
 // Automatically getting new headers and verifying them.

@@ -11,16 +11,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/evidence"
-	"github.com/HPISTechnologies/consensus-engine/evidence/mocks"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/HPISTechnologies/consensus-engine/proto/tendermint/version"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	smmocks "github.com/HPISTechnologies/consensus-engine/state/mocks"
-	"github.com/HPISTechnologies/consensus-engine/store"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	"github.com/HPISTechnologies/consensus-engine/version"
+	"github.com/arcology/consensus-engine/evidence"
+	"github.com/arcology/consensus-engine/evidence/mocks"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
+	sm "github.com/arcology/consensus-engine/state"
+	smmocks "github.com/arcology/consensus-engine/state/mocks"
+	"github.com/arcology/consensus-engine/store"
+	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology/consensus-engine/version"
 )
 
 func TestMain(m *testing.M) {

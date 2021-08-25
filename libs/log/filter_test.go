@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 func TestVariousLevels(t *testing.T) {

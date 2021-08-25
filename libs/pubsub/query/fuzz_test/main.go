@@ -3,7 +3,7 @@ package fuzz_test
 import (
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
+	"github.com/arcology/consensus-engine/libs/pubsub/query"
 )
 
 func Fuzz(data []byte) int {

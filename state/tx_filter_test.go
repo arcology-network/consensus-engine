@@ -9,9 +9,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestTxFilter(t *testing.T) {

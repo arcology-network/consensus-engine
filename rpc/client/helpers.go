@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Waiter is informed of current height, decided whether to quit early

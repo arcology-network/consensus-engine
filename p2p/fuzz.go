@@ -4,9 +4,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/config"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/config"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
 )
 
 // FuzzedConnection wraps any net.Conn and depending on the mode either delays

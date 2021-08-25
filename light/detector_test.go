@@ -9,12 +9,12 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/light"
-	"github.com/HPISTechnologies/consensus-engine/light/provider"
-	mockp "github.com/HPISTechnologies/consensus-engine/light/provider/mock"
-	dbs "github.com/HPISTechnologies/consensus-engine/light/store/db"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/light"
+	"github.com/arcology/consensus-engine/light/provider"
+	mockp "github.com/arcology/consensus-engine/light/provider/mock"
+	dbs "github.com/arcology/consensus-engine/light/store/db"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestLightClientAttackEvidence_Lunatic(t *testing.T) {

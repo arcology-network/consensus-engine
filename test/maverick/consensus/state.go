@@ -13,22 +13,22 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	tmcon "github.com/HPISTechnologies/consensus-engine/consensus"
-	cstypes "github.com/HPISTechnologies/consensus-engine/consensus/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	tmevents "github.com/HPISTechnologies/consensus-engine/libs/events"
-	"github.com/HPISTechnologies/consensus-engine/libs/fail"
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	cfg "github.com/arcology/consensus-engine/config"
+	tmcon "github.com/arcology/consensus-engine/consensus"
+	cstypes "github.com/arcology/consensus-engine/consensus/types"
+	"github.com/arcology/consensus-engine/crypto"
+	tmevents "github.com/arcology/consensus-engine/libs/events"
+	"github.com/arcology/consensus-engine/libs/fail"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/p2p"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 // State handles execution of the consensus algorithm.
@@ -214,7 +214,7 @@ func (cs *State) handleMsg(mi msgInfo) {
 		// We probably don't want to stop the peer here. The vote does not
 		// necessarily comes from a malicious peer but can be just broadcasted by
 		// a typical peer.
-		// https://github.com/HPISTechnologies/consensus-engine/issues/1281
+		// https://github.com/arcology/consensus-engine/issues/1281
 		// }
 
 		// NOTE: the vote is broadcast to peers by the reactor listening
@@ -1777,7 +1777,7 @@ func (cs *State) tryAddVote(vote *types.Vote, peerID p2p.ID) (bool, error) {
 			// 1) bad peer OR
 			// 2) not a bad peer? this can also err sometimes with "Unexpected step" OR
 			// 3) tmkms use with multiple validators connecting to a single tmkms instance
-			// 		(https://github.com/HPISTechnologies/consensus-engine/issues/3839).
+			// 		(https://github.com/arcology/consensus-engine/issues/3839).
 			cs.Logger.Info("Error attempting to add vote", "err", err)
 			return added, ErrAddingVote
 		}

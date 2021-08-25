@@ -6,7 +6,7 @@ RUN apt-get update && \
   jq bsdmainutils vim-common psmisc netcat curl
 
 # Setup tendermint repo
-ENV REPO $GOPATH/src/github.com/HPISTechnologies/consensus-engine
+ENV REPO $GOPATH/src/github.com/arcology/consensus-engine
 ENV GOBIN $GOPATH/bin
 WORKDIR $REPO
 

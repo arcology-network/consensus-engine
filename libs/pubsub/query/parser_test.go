@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
+	"github.com/arcology/consensus-engine/libs/pubsub/query"
 )
 
 // TODO: fuzzy testing?

@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/pubsub/query"
 )
 
 // TxIndexer interface defines methods to index and search transactions.

@@ -1,7 +1,7 @@
 package evidence
 
 import (
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 //go:generate mockery --case underscore --name BlockStore

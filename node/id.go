@@ -3,7 +3,7 @@ package node
 import (
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto"
 )
 
 type ID struct {

@@ -8,10 +8,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/cli"
-	tmflags "github.com/HPISTechnologies/consensus-engine/libs/cli/flags"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/cli"
+	tmflags "github.com/arcology/consensus-engine/libs/cli/flags"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 var (

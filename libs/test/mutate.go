@@ -1,7 +1,7 @@
 package test
 
 import (
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
 )
 
 // Contract: !bytes.Equal(input, output) && len(input) >= len(output)

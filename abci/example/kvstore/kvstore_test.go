@@ -8,14 +8,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/service"
 
-	abcicli "github.com/HPISTechnologies/consensus-engine/abci/client"
-	"github.com/HPISTechnologies/consensus-engine/abci/example/code"
-	abciserver "github.com/HPISTechnologies/consensus-engine/abci/server"
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	abcicli "github.com/arcology/consensus-engine/abci/client"
+	"github.com/arcology/consensus-engine/abci/example/code"
+	abciserver "github.com/arcology/consensus-engine/abci/server"
+	"github.com/arcology/consensus-engine/abci/types"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
 )
 
 const (

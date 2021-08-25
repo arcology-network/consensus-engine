@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/libs/protoio"
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
-	tmp2p "github.com/HPISTechnologies/consensus-engine/proto/tendermint/p2p"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/libs/protoio"
+	"github.com/arcology/consensus-engine/p2p/conn"
+	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
 )
 
 var defaultNodeName = "host_peer"

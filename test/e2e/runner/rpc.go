@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	e2e "github.com/HPISTechnologies/consensus-engine/test/e2e/pkg"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	rpctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // waitForHeight waits for the network to reach a certain height (or above),

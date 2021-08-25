@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	rpcserver "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/server"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	rpcserver "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 var routes = map[string]*rpcserver.RPCFunc{

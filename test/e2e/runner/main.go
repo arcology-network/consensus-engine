@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	e2e "github.com/HPISTechnologies/consensus-engine/test/e2e/pkg"
+	"github.com/arcology/consensus-engine/libs/log"
+	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
 )
 
 var (

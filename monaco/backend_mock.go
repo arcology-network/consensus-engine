@@ -3,7 +3,7 @@ package monaco
 import (
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/log"
 )
 
 type BackendMock struct {

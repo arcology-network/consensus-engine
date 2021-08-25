@@ -1,8 +1,8 @@
 package kvstore
 
 import (
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/abci/types"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
 )
 
 // RandVal creates one random validator, with a key derived

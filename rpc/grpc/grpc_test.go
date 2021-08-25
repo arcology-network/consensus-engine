@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/kvstore"
-	core_grpc "github.com/HPISTechnologies/consensus-engine/rpc/grpc"
-	rpctest "github.com/HPISTechnologies/consensus-engine/rpc/test"
+	"github.com/arcology/consensus-engine/abci/example/kvstore"
+	core_grpc "github.com/arcology/consensus-engine/rpc/grpc"
+	rpctest "github.com/arcology/consensus-engine/rpc/test"
 )
 
 func TestMain(m *testing.M) {

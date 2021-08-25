@@ -1,7 +1,7 @@
 syntax = "proto3";
 package tendermint.p2p;
 
-option go_package = "github.com/HPISTechnologies/consensus-engine/proto/tendermint/p2p";
+option go_package = "github.com/arcology/consensus-engine/proto/tendermint/p2p";
 
 import "gogoproto/gogo.proto";
 

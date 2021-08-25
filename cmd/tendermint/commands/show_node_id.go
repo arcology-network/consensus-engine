@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/HPISTechnologies/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p"
 )
 
 // ShowNodeIDCmd dumps node's ID to the standard output.

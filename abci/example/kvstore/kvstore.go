@@ -8,9 +8,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/code"
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/version"
+	"github.com/arcology/consensus-engine/abci/example/code"
+	"github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/version"
 )
 
 var (

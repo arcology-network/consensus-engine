@@ -17,7 +17,7 @@ package crypto_test
 import (
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto"
 )
 
 func ExampleSha256() {

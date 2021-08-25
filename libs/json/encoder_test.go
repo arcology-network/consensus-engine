@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/json"
+	"github.com/arcology/consensus-engine/libs/json"
 )
 
 func TestMarshal(t *testing.T) {

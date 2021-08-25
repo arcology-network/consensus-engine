@@ -10,12 +10,12 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	tmversion "github.com/HPISTechnologies/consensus-engine/proto/tendermint/version"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	"github.com/HPISTechnologies/consensus-engine/version"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
+	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology/consensus-engine/version"
 )
 
 func TestLast_FirstLightBlockHeight(t *testing.T) {

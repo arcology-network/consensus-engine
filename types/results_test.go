@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
 )
 
 func TestABCIResults(t *testing.T) {

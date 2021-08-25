@@ -1,4 +1,4 @@
-module github.com/HPISTechnologies/consensus-engine
+module github.com/arcology/consensus-engine
 
 go 1.15
 

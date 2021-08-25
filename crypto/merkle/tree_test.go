@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	. "github.com/HPISTechnologies/consensus-engine/libs/test"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	. "github.com/arcology/consensus-engine/libs/test"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
 )
 
 type testItem []byte

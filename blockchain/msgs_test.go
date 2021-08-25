@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	bcproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestBcBlockRequestMessageValidateBasic(t *testing.T) {

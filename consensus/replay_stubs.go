@@ -1,12 +1,12 @@
 package consensus
 
 import (
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/clist"
-	mempl "github.com/HPISTechnologies/consensus-engine/mempool"
-	tmstate "github.com/HPISTechnologies/consensus-engine/proto/tendermint/state"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/clist"
+	mempl "github.com/arcology/consensus-engine/mempool"
+	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
+	"github.com/arcology/consensus-engine/proxy"
+	"github.com/arcology/consensus-engine/types"
 )
 
 //-----------------------------------------------------------------------------

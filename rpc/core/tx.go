@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"sort"
 
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmquery "github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
-	"github.com/HPISTechnologies/consensus-engine/state/txindex/null"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmquery "github.com/arcology/consensus-engine/libs/pubsub/query"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology/consensus-engine/state/txindex/null"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // Tx allows you to query the transaction results. `nil` could mean the

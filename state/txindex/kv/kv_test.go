@@ -13,11 +13,11 @@ import (
 
 	db "github.com/tendermint/tm-db"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/libs/pubsub/query"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	"github.com/HPISTechnologies/consensus-engine/state/txindex"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/libs/pubsub/query"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology/consensus-engine/state/txindex"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestTxIndex(t *testing.T) {
@@ -295,7 +295,7 @@ func TestTxSearchMultipleTxs(t *testing.T) {
 	require.NoError(t, err)
 
 	// indexed fourth (to test we don't include txs with similar events)
-	// https://github.com/HPISTechnologies/consensus-engine/issues/2908
+	// https://github.com/arcology/consensus-engine/issues/2908
 	txResult4 := txResultWithEvents([]abci.Event{
 		{Type: "account", Attributes: []abci.EventAttribute{{Key: []byte("number.id"), Value: []byte("1"), Index: true}}},
 	})

@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"sort"
 
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	types "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology/consensus-engine/libs/log"
+	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 // HTTP + JSON handler

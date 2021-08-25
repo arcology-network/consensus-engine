@@ -13,14 +13,14 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto/merkle"
-	"github.com/HPISTechnologies/consensus-engine/libs/bytes"
-	lcmock "github.com/HPISTechnologies/consensus-engine/light/rpc/mocks"
-	tmcrypto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
-	rpcmock "github.com/HPISTechnologies/consensus-engine/rpc/client/mocks"
-	ctypes "github.com/HPISTechnologies/consensus-engine/rpc/core/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/crypto/merkle"
+	"github.com/arcology/consensus-engine/libs/bytes"
+	lcmock "github.com/arcology/consensus-engine/light/rpc/mocks"
+	tmcrypto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
+	rpcmock "github.com/arcology/consensus-engine/rpc/client/mocks"
+	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 // TestABCIQuery tests ABCIQuery requests and verifies proofs. HAPPY PATH 😀

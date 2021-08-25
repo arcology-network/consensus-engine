@@ -5,7 +5,7 @@ package blockchain
 
 import (
 	fmt "fmt"
-	types "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
+	types "github.com/arcology/consensus-engine/proto/tendermint/types"
 	proto "github.com/gogo/protobuf/proto"
 	io "io"
 	math "math"

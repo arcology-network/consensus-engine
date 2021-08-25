@@ -1,6 +1,6 @@
 package store
 
-import "github.com/HPISTechnologies/consensus-engine/types"
+import "github.com/arcology/consensus-engine/types"
 
 // Store is anything that can persistently store headers.
 type Store interface {

@@ -9,11 +9,11 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/code"
-	"github.com/HPISTechnologies/consensus-engine/abci/types"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	pc "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
+	"github.com/arcology/consensus-engine/abci/example/code"
+	"github.com/arcology/consensus-engine/abci/types"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
+	"github.com/arcology/consensus-engine/libs/log"
+	pc "github.com/arcology/consensus-engine/proto/tendermint/crypto"
 )
 
 const (

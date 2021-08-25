@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	tmcrypto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	tmcrypto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
 )
 
 const (

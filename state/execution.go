@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
-	"github.com/HPISTechnologies/consensus-engine/libs/fail"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	mempl "github.com/HPISTechnologies/consensus-engine/mempool"
-	"github.com/HPISTechnologies/consensus-engine/monaco"
-	tmstate "github.com/HPISTechnologies/consensus-engine/proto/tendermint/state"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
+	"github.com/arcology/consensus-engine/libs/fail"
+	"github.com/arcology/consensus-engine/libs/log"
+	mempl "github.com/arcology/consensus-engine/mempool"
+	"github.com/arcology/consensus-engine/monaco"
+	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/proxy"
+	"github.com/arcology/consensus-engine/types"
 )
 
 //-----------------------------------------------------------------------------

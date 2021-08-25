@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/abci/example/kvstore"
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/abci/example/kvstore"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/proxy"
+	"github.com/arcology/consensus-engine/types"
 )
 
 func TestCacheRemove(t *testing.T) {

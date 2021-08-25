@@ -13,11 +13,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/p2p/mock"
-	tmp2p "github.com/HPISTechnologies/consensus-engine/proto/tendermint/p2p"
+	"github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p/mock"
+	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
 )
 
 var (
@@ -403,7 +403,7 @@ func TestPEXReactorDialsPeerUpToMaxAttemptsInSeedMode(t *testing.T) {
 // this should give it time to request addrs and for the seed
 // to call FlushStop, and allows us to test calling Stop concurrently
 // with FlushStop. Before a fix, this non-deterministically reproduced
-// https://github.com/HPISTechnologies/consensus-engine/issues/3231.
+// https://github.com/arcology/consensus-engine/issues/3231.
 func TestPEXReactorSeedModeFlushStop(t *testing.T) {
 	N := 2
 	switches := make([]*p2p.Switch, N)

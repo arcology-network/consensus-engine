@@ -11,14 +11,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	// tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmcon "github.com/HPISTechnologies/consensus-engine/consensus"
-	auto "github.com/HPISTechnologies/consensus-engine/libs/autofile"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmcons "github.com/HPISTechnologies/consensus-engine/proto/tendermint/consensus"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	// tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmcon "github.com/arcology/consensus-engine/consensus"
+	auto "github.com/arcology/consensus-engine/libs/autofile"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmcons "github.com/arcology/consensus-engine/proto/tendermint/consensus"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 const (

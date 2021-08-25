@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	"github.com/arcology/consensus-engine/types"
 )
 
 var (

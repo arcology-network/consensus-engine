@@ -1,7 +1,7 @@
 package version
 
 import (
-	"github.com/HPISTechnologies/consensus-engine/version"
+	"github.com/arcology/consensus-engine/version"
 )
 
 // TODO: eliminate this after some version refactor

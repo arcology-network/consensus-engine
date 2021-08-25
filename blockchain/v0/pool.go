@@ -7,12 +7,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	flow "github.com/HPISTechnologies/consensus-engine/libs/flowrate"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	flow "github.com/arcology/consensus-engine/libs/flowrate"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/service"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/types"
 )
 
 /*

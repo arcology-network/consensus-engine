@@ -13,21 +13,21 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/behaviour"
-	bc "github.com/HPISTechnologies/consensus-engine/blockchain"
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/libs/service"
-	"github.com/HPISTechnologies/consensus-engine/mempool/mock"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	"github.com/HPISTechnologies/consensus-engine/p2p/conn"
-	bcproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/blockchain"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/store"
-	"github.com/HPISTechnologies/consensus-engine/types"
-	tmtime "github.com/HPISTechnologies/consensus-engine/types/time"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/behaviour"
+	bc "github.com/arcology/consensus-engine/blockchain"
+	cfg "github.com/arcology/consensus-engine/config"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology/consensus-engine/mempool/mock"
+	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology/consensus-engine/p2p/conn"
+	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
+	"github.com/arcology/consensus-engine/proxy"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/store"
+	"github.com/arcology/consensus-engine/types"
+	tmtime "github.com/arcology/consensus-engine/types/time"
 )
 
 type mockPeer struct {
@@ -171,7 +171,7 @@ func newTestReactor(p testReactorParams) *BlockchainReactor {
 }
 
 // This test is left here and not deleted to retain the termination cases for
-// future improvement in [#4482](https://github.com/HPISTechnologies/consensus-engine/issues/4482).
+// future improvement in [#4482](https://github.com/arcology/consensus-engine/issues/4482).
 // func TestReactorTerminationScenarios(t *testing.T) {
 
 // 	config := cfg.ResetTestRoot("blockchain_reactor_v2_test")

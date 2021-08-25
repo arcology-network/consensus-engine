@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/chacha20poly1305"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	cryptoenc "github.com/HPISTechnologies/consensus-engine/crypto/encoding"
-	"github.com/HPISTechnologies/consensus-engine/libs/protoio"
-	tmp2p "github.com/HPISTechnologies/consensus-engine/proto/tendermint/p2p"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
+	"github.com/arcology/consensus-engine/libs/protoio"
+	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
 )
 
 type buffer struct {

@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto/ed25519"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmnet "github.com/HPISTechnologies/consensus-engine/libs/net"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/crypto/ed25519"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmnet "github.com/arcology/consensus-engine/libs/net"
+	tmos "github.com/arcology/consensus-engine/libs/os"
 
-	"github.com/HPISTechnologies/consensus-engine/privval"
+	"github.com/arcology/consensus-engine/privval"
 )
 
 func main() {

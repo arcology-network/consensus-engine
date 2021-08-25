@@ -13,11 +13,11 @@ import (
 	gogotypes "github.com/gogo/protobuf/types"
 	dbm "github.com/tendermint/tm-db"
 
-	clist "github.com/HPISTechnologies/consensus-engine/libs/clist"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	clist "github.com/arcology/consensus-engine/libs/clist"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 const (

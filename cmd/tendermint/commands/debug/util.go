@@ -9,8 +9,8 @@ import (
 	"path"
 	"path/filepath"
 
-	cfg "github.com/HPISTechnologies/consensus-engine/config"
-	rpchttp "github.com/HPISTechnologies/consensus-engine/rpc/client/http"
+	cfg "github.com/arcology/consensus-engine/config"
+	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
 )
 
 // dumpStatus gets node status state dump from the Tendermint RPC and writes it

@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/privval"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/privval"
 )
 
 // ResetAllCmd removes the database of this Tendermint core

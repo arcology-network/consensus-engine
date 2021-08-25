@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmos "github.com/HPISTechnologies/consensus-engine/libs/os"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
+	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology/consensus-engine/p2p"
 )
 
 // GenNodeKeyCmd allows the generation of a node key. It prints node's ID to

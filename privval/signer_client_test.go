@@ -8,13 +8,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/consensus-engine/crypto"
-	"github.com/HPISTechnologies/consensus-engine/crypto/tmhash"
-	tmrand "github.com/HPISTechnologies/consensus-engine/libs/rand"
-	cryptoproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/crypto"
-	privvalproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/privval"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	cryptoproto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
+	privvalproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 type signerTestCase struct {

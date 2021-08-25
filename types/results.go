@@ -1,8 +1,8 @@
 package types
 
 import (
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	"github.com/HPISTechnologies/consensus-engine/crypto/merkle"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	"github.com/arcology/consensus-engine/crypto/merkle"
 )
 
 // ABCIResults wraps the deliver tx results to return a proof.

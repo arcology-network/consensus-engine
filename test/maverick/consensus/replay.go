@@ -8,13 +8,13 @@ import (
 	"reflect"
 	"time"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	tmcon "github.com/HPISTechnologies/consensus-engine/consensus"
-	"github.com/HPISTechnologies/consensus-engine/crypto/merkle"
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	"github.com/HPISTechnologies/consensus-engine/proxy"
-	sm "github.com/HPISTechnologies/consensus-engine/state"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	tmcon "github.com/arcology/consensus-engine/consensus"
+	"github.com/arcology/consensus-engine/crypto/merkle"
+	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology/consensus-engine/proxy"
+	sm "github.com/arcology/consensus-engine/state"
+	"github.com/arcology/consensus-engine/types"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli)

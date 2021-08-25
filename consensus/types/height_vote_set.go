@@ -6,11 +6,11 @@ import (
 	"strings"
 	"sync"
 
-	tmjson "github.com/HPISTechnologies/consensus-engine/libs/json"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	"github.com/HPISTechnologies/consensus-engine/p2p"
-	tmproto "github.com/HPISTechnologies/consensus-engine/proto/tendermint/types"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	"github.com/arcology/consensus-engine/p2p"
+	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology/consensus-engine/types"
 )
 
 type RoundVoteSet struct {

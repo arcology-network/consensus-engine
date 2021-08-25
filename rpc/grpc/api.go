@@ -3,9 +3,9 @@ package coregrpc
 import (
 	"context"
 
-	abci "github.com/HPISTechnologies/consensus-engine/abci/types"
-	core "github.com/HPISTechnologies/consensus-engine/rpc/core"
-	rpctypes "github.com/HPISTechnologies/consensus-engine/rpc/jsonrpc/types"
+	abci "github.com/arcology/consensus-engine/abci/types"
+	core "github.com/arcology/consensus-engine/rpc/core"
+	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
 )
 
 type broadcastAPI struct {

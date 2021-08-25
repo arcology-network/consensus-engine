@@ -8,12 +8,12 @@ import (
 	"sort"
 	"time"
 
-	"github.com/HPISTechnologies/consensus-engine/libs/log"
-	tmmath "github.com/HPISTechnologies/consensus-engine/libs/math"
-	tmsync "github.com/HPISTechnologies/consensus-engine/libs/sync"
-	"github.com/HPISTechnologies/consensus-engine/light/provider"
-	"github.com/HPISTechnologies/consensus-engine/light/store"
-	"github.com/HPISTechnologies/consensus-engine/types"
+	"github.com/arcology/consensus-engine/libs/log"
+	tmmath "github.com/arcology/consensus-engine/libs/math"
+	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology/consensus-engine/light/provider"
+	"github.com/arcology/consensus-engine/light/store"
+	"github.com/arcology/consensus-engine/types"
 )
 
 type mode byte
