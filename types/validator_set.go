@@ -9,9 +9,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/arcology/consensus-engine/crypto/merkle"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 const (

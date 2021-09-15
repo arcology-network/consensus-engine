@@ -1,10 +1,10 @@
 package mock
 
 import (
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/libs/clist"
-	mempl "github.com/arcology/consensus-engine/mempool"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/libs/clist"
+	mempl "github.com/arcology-network/consensus-engine/mempool"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // Mempool is an empty implementation of a Mempool, useful for testing.

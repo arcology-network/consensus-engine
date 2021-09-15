@@ -12,13 +12,13 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	"github.com/arcology/consensus-engine/proxy"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/store"
-	"github.com/arcology/consensus-engine/types"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	"github.com/arcology-network/consensus-engine/proxy"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/store"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

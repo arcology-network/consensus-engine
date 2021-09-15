@@ -9,12 +9,12 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
-	"github.com/arcology/consensus-engine/version"
+	tmstate "github.com/arcology-network/consensus-engine/proto/tendermint/state"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 // database keys

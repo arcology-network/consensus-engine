@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
 )
 
 // TrustOptions are the trust parameters needed when a new light client

@@ -10,8 +10,8 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 const defaultStorePeriodicSaveInterval = 1 * time.Minute

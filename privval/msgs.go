@@ -5,7 +5,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	privvalproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
+	privvalproto "github.com/arcology-network/consensus-engine/proto/tendermint/privval"
 )
 
 // TODO: Add ChainIDRequest

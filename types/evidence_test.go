@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 var defaultVoteTime = time.Date(2019, 1, 1, 0, 0, 0, 0, time.UTC)

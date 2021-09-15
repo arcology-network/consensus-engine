@@ -10,13 +10,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/bytes"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/privval"
-	"github.com/arcology/consensus-engine/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/privval"
+	"github.com/arcology-network/consensus-engine/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
 )
 
 var (

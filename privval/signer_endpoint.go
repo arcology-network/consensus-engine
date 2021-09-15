@@ -5,10 +5,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/arcology/consensus-engine/libs/protoio"
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	privvalproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
+	"github.com/arcology-network/consensus-engine/libs/protoio"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	privvalproto "github.com/arcology-network/consensus-engine/proto/tendermint/privval"
 )
 
 const (

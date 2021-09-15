@@ -12,11 +12,11 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/arcology/consensus-engine/abci/example/code"
-	abci "github.com/arcology/consensus-engine/abci/types"
-	mempl "github.com/arcology/consensus-engine/mempool"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/abci/example/code"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	mempl "github.com/arcology-network/consensus-engine/mempool"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // for testing

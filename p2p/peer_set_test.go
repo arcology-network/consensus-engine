@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/service"
 )
 
 // mockPeer for testing the PeerSet

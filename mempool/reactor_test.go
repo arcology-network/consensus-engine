@@ -13,16 +13,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	abci "github.com/arcology/consensus-engine/abci/types"
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/monaco"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/p2p/mock"
-	memproto "github.com/arcology/consensus-engine/proto/tendermint/mempool"
-	"github.com/arcology/consensus-engine/proxy"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/monaco"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p/mock"
+	memproto "github.com/arcology-network/consensus-engine/proto/tendermint/mempool"
+	"github.com/arcology-network/consensus-engine/proxy"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (
@@ -59,7 +59,7 @@ func TestReactorBroadcastLocalTxs(t *testing.T) {
 	time.Sleep(3 * time.Second)
 }
 
-// regression test for https://github.com/arcology/consensus-engine/issues/5408
+// regression test for https://github.com/arcology-network/consensus-engine/issues/5408
 func TestReactorConcurrency(t *testing.T) {
 	config := cfg.TestConfig()
 	const N = 2

@@ -7,8 +7,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/arcology/consensus-engine/light"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/light"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // verify verifies the evidence fully by checking:

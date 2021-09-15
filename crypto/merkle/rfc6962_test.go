@@ -20,7 +20,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/arcology/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
 )
 
 func TestRFC6962Hasher(t *testing.T) {

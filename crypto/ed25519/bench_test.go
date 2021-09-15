@@ -4,8 +4,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/internal/benchmarking"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/internal/benchmarking"
 )
 
 func BenchmarkKeyGeneration(b *testing.B) {

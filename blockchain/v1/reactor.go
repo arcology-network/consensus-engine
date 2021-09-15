@@ -5,14 +5,14 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/arcology/consensus-engine/behaviour"
-	bc "github.com/arcology/consensus-engine/blockchain"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/p2p"
-	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/store"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/behaviour"
+	bc "github.com/arcology-network/consensus-engine/blockchain"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/p2p"
+	bcproto "github.com/arcology-network/consensus-engine/proto/tendermint/blockchain"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/store"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

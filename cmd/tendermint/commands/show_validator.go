@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	"github.com/arcology/consensus-engine/privval"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	"github.com/arcology-network/consensus-engine/privval"
 )
 
 // ShowValidatorCmd adds capabilities for showing the validator info.

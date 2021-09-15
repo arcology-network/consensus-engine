@@ -12,9 +12,9 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 var wsCallTimeout = 5 * time.Second

@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abcicli "github.com/arcology/consensus-engine/abci/client"
-	"github.com/arcology/consensus-engine/abci/server"
-	"github.com/arcology/consensus-engine/abci/types"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	"github.com/arcology/consensus-engine/libs/service"
+	abcicli "github.com/arcology-network/consensus-engine/abci/client"
+	"github.com/arcology-network/consensus-engine/abci/server"
+	"github.com/arcology-network/consensus-engine/abci/types"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/libs/service"
 )
 
 func TestProperSyncCalls(t *testing.T) {

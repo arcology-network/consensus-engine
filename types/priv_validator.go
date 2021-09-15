@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 // PrivValidator defines the functionality of a local Tendermint validator

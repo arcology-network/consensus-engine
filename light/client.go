@@ -8,12 +8,12 @@ import (
 	"sort"
 	"time"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/light/provider"
-	"github.com/arcology/consensus-engine/light/store"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/light/provider"
+	"github.com/arcology-network/consensus-engine/light/store"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 type mode byte

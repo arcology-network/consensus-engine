@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/crypto/merkle"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 // Evidence represents any provable malicious activity by a validator.

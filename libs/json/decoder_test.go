@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/libs/json"
 )
 
 func TestUnmarshal(t *testing.T) {

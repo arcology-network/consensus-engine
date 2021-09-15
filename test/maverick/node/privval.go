@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	"github.com/arcology/consensus-engine/libs/tempfile"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	"github.com/arcology-network/consensus-engine/libs/tempfile"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // *******************************************************************************************************************

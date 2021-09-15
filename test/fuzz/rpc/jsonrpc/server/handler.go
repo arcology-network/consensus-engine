@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	rs "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	rs "github.com/arcology-network/consensus-engine/rpc/jsonrpc/server"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 var rpcFuncMap = map[string]*rs.RPCFunc{

@@ -8,8 +8,8 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 func TestWebsocketManagerHandler(t *testing.T) {

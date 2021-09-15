@@ -3,11 +3,11 @@ package proxy
 import (
 	"fmt"
 
-	abcicli "github.com/arcology/consensus-engine/abci/client"
-	"github.com/arcology/consensus-engine/abci/example/counter"
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	"github.com/arcology/consensus-engine/abci/types"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	abcicli "github.com/arcology-network/consensus-engine/abci/client"
+	"github.com/arcology-network/consensus-engine/abci/example/counter"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	"github.com/arcology-network/consensus-engine/abci/types"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 // ClientCreator creates new ABCI clients.

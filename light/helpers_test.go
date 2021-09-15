@@ -3,14 +3,14 @@ package light_test
 import (
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 // privKeys is a helper type for testing.

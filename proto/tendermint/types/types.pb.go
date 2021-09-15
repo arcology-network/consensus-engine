@@ -5,8 +5,8 @@ package types
 
 import (
 	fmt "fmt"
-	crypto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
-	version "github.com/arcology/consensus-engine/proto/tendermint/version"
+	crypto "github.com/arcology-network/consensus-engine/proto/tendermint/crypto"
+	version "github.com/arcology-network/consensus-engine/proto/tendermint/version"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"

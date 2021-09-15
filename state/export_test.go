@@ -3,10 +3,10 @@ package state
 import (
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	tmstate "github.com/arcology-network/consensus-engine/proto/tendermint/state"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //

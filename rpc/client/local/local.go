@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/libs/bytes"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
-	tmquery "github.com/arcology/consensus-engine/libs/pubsub/query"
-	nm "github.com/arcology/consensus-engine/node"
-	rpcclient "github.com/arcology/consensus-engine/rpc/client"
-	"github.com/arcology/consensus-engine/rpc/core"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
-	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmpubsub "github.com/arcology-network/consensus-engine/libs/pubsub"
+	tmquery "github.com/arcology-network/consensus-engine/libs/pubsub/query"
+	nm "github.com/arcology-network/consensus-engine/node"
+	rpcclient "github.com/arcology-network/consensus-engine/rpc/client"
+	"github.com/arcology-network/consensus-engine/rpc/core"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 /*

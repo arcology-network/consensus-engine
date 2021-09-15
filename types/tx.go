@@ -6,10 +6,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/arcology/consensus-engine/crypto/merkle"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 var QuickHash func(txs Txs) ([]byte, error)

@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	"github.com/arcology/consensus-engine/privval"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/privval"
 )
 
 // GenValidatorCmd allows the generation of a keypair for a

@@ -10,15 +10,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/abci/example/counter"
-	cstypes "github.com/arcology/consensus-engine/consensus/types"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	p2pmock "github.com/arcology/consensus-engine/p2p/mock"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/abci/example/counter"
+	cstypes "github.com/arcology-network/consensus-engine/consensus/types"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmpubsub "github.com/arcology-network/consensus-engine/libs/pubsub"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	p2pmock "github.com/arcology-network/consensus-engine/p2p/mock"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 /*

@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
 )
 
 var (

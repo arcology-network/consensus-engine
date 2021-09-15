@@ -8,9 +8,9 @@ import (
 
 	"golang.org/x/crypto/ed25519"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
 )
 
 //-------------------------------------

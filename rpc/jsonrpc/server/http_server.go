@@ -15,8 +15,8 @@ import (
 
 	"golang.org/x/net/netutil"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 // Config is a RPC server configuration.

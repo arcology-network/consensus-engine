@@ -5,10 +5,10 @@ import (
 	"math"
 	"time"
 
-	flow "github.com/arcology/consensus-engine/libs/flowrate"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/types"
+	flow "github.com/arcology-network/consensus-engine/libs/flowrate"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //--------

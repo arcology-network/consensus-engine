@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/libs/bits"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/bits"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //-----------------------------------------------------------------------------

@@ -17,37 +17,37 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	bcv0 "github.com/arcology/consensus-engine/blockchain/v0"
-	bcv1 "github.com/arcology/consensus-engine/blockchain/v1"
-	bcv2 "github.com/arcology/consensus-engine/blockchain/v2"
-	cfg "github.com/arcology/consensus-engine/config"
-	cs "github.com/arcology/consensus-engine/consensus"
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/evidence"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
-	"github.com/arcology/consensus-engine/libs/service"
-	"github.com/arcology/consensus-engine/light"
-	mempl "github.com/arcology/consensus-engine/mempool"
-	"github.com/arcology/consensus-engine/monaco"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/p2p/pex"
-	"github.com/arcology/consensus-engine/privval"
-	"github.com/arcology/consensus-engine/proxy"
-	rpccore "github.com/arcology/consensus-engine/rpc/core"
-	grpccore "github.com/arcology/consensus-engine/rpc/grpc"
-	rpcserver "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/state/txindex"
-	"github.com/arcology/consensus-engine/state/txindex/kv"
-	"github.com/arcology/consensus-engine/state/txindex/null"
-	"github.com/arcology/consensus-engine/statesync"
-	"github.com/arcology/consensus-engine/store"
-	"github.com/arcology/consensus-engine/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
-	"github.com/arcology/consensus-engine/version"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	bcv0 "github.com/arcology-network/consensus-engine/blockchain/v0"
+	bcv1 "github.com/arcology-network/consensus-engine/blockchain/v1"
+	bcv2 "github.com/arcology-network/consensus-engine/blockchain/v2"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	cs "github.com/arcology-network/consensus-engine/consensus"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/evidence"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmpubsub "github.com/arcology-network/consensus-engine/libs/pubsub"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/light"
+	mempl "github.com/arcology-network/consensus-engine/mempool"
+	"github.com/arcology-network/consensus-engine/monaco"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p/pex"
+	"github.com/arcology-network/consensus-engine/privval"
+	"github.com/arcology-network/consensus-engine/proxy"
+	rpccore "github.com/arcology-network/consensus-engine/rpc/core"
+	grpccore "github.com/arcology-network/consensus-engine/rpc/grpc"
+	rpcserver "github.com/arcology-network/consensus-engine/rpc/jsonrpc/server"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/state/txindex"
+	"github.com/arcology-network/consensus-engine/state/txindex/kv"
+	"github.com/arcology-network/consensus-engine/state/txindex/null"
+	"github.com/arcology-network/consensus-engine/statesync"
+	"github.com/arcology-network/consensus-engine/store"
+	"github.com/arcology-network/consensus-engine/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 //------------------------------------------------------------------------------
@@ -125,7 +125,7 @@ func DefaultMetricsProvider(config *cfg.InstrumentationConfig) MetricsProvider {
 type Option func(*Node)
 
 // Temporary interface for switching to fast sync, we should get rid of v0 and v1 reactors.
-// See: https://github.com/arcology/consensus-engine/issues/4595
+// See: https://github.com/arcology-network/consensus-engine/issues/4595
 type fastSyncReactor interface {
 	SwitchToFastSync(sm.State) error
 }
@@ -548,7 +548,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 			// blocks assuming 10s blocks ~ 28 hours.
 			// TODO (melekes): make it dynamic based on the actual block latencies
 			// from the live network.
-			// https://github.com/arcology/consensus-engine/issues/3523
+			// https://github.com/arcology-network/consensus-engine/issues/3523
 			SeedDisconnectWaitPeriod:     28 * time.Hour,
 			PersistentPeersMaxDialPeriod: config.P2P.PersistentPeersMaxDialPeriod,
 		})
@@ -744,7 +744,7 @@ func NewNode(config *cfg.Config,
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> fast sync -> consensus) is very messy,
 	// we should clean this whole thing up. See:
-	// https://github.com/arcology/consensus-engine/issues/4644
+	// https://github.com/arcology-network/consensus-engine/issues/4644
 	stateSyncReactor := statesync.NewReactor(proxyApp.Snapshot(), proxyApp.Query(),
 		config.StateSync.TempDir)
 	stateSyncReactor.SetLogger(logger.With("module", "statesync"))
@@ -974,7 +974,7 @@ func NewNodeEx(config *cfg.Config,
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> fast sync -> consensus) is very messy,
 	// we should clean this whole thing up. See:
-	// https://github.com/arcology/consensus-engine/issues/4644
+	// https://github.com/arcology-network/consensus-engine/issues/4644
 	stateSyncReactor := statesync.NewReactor(proxyApp.Snapshot(), proxyApp.Query(),
 		config.StateSync.TempDir)
 	stateSyncReactor.SetLogger(logger.With("module", "statesync"))
@@ -1244,7 +1244,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 	config.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/arcology/consensus-engine/issues/3435
+	// See https://github.com/arcology-network/consensus-engine/issues/3435
 	if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}
@@ -1323,7 +1323,7 @@ func (n *Node) startRPC() ([]net.Listener, error) {
 		config.MaxOpenConnections = n.config.RPC.GRPCMaxOpenConnections
 		// If necessary adjust global WriteTimeout to ensure it's greater than
 		// TimeoutBroadcastTxCommit.
-		// See https://github.com/arcology/consensus-engine/issues/3435
+		// See https://github.com/arcology-network/consensus-engine/issues/3435
 		if config.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 			config.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 		}

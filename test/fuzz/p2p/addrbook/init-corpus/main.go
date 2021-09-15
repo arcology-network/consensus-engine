@@ -11,8 +11,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 func main() {

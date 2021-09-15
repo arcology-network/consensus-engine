@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/arcology/consensus-engine/crypto"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 func TestLightBlockValidateBasic(t *testing.T) {

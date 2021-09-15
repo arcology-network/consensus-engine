@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/arcology/consensus-engine/libs/bits"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/libs/bits"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 const (

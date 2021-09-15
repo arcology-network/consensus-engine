@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
+	e2e "github.com/arcology-network/consensus-engine/test/e2e/pkg"
 )
 
 // Test runs test cases under tests/

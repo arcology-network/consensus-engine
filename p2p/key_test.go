@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 )
 
 func TestLoadOrGenNodeKey(t *testing.T) {

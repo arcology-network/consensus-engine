@@ -8,8 +8,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/arcology/consensus-engine/light/provider"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/light/provider"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // The detector component of the light client detect and handles attacks on the light client.

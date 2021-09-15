@@ -3,13 +3,13 @@ package pex
 import (
 	"net"
 
-	"github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/libs/service"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/p2p/pex"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p/pex"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 var (

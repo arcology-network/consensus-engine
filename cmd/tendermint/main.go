@@ -4,11 +4,11 @@ import (
 	"os"
 	"path/filepath"
 
-	cmd "github.com/arcology/consensus-engine/cmd/tendermint/commands"
-	"github.com/arcology/consensus-engine/cmd/tendermint/commands/debug"
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/cli"
-	nm "github.com/arcology/consensus-engine/node"
+	cmd "github.com/arcology-network/consensus-engine/cmd/tendermint/commands"
+	"github.com/arcology-network/consensus-engine/cmd/tendermint/commands/debug"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/cli"
+	nm "github.com/arcology-network/consensus-engine/node"
 )
 
 func main() {

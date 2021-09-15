@@ -15,7 +15,7 @@ import (
 	"fmt"
 	"sync"
 
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 // MaxLength is the max allowed number of elements a linked list is

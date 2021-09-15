@@ -15,17 +15,17 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	"github.com/arcology/consensus-engine/evidence"
-	"github.com/arcology/consensus-engine/evidence/mocks"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/p2p"
-	p2pmocks "github.com/arcology/consensus-engine/p2p/mocks"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/types"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/evidence"
+	"github.com/arcology-network/consensus-engine/evidence/mocks"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/p2p"
+	p2pmocks "github.com/arcology-network/consensus-engine/p2p/mocks"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 var (

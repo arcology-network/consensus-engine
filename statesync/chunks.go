@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/p2p"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 // errDone is returned by chunkQueue.Next() when all chunks have been returned.

@@ -4,13 +4,13 @@ import (
 	"errors"
 	"fmt"
 
-	tmcon "github.com/arcology/consensus-engine/consensus"
-	cstypes "github.com/arcology/consensus-engine/consensus/types"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	"github.com/arcology/consensus-engine/p2p"
-	tmcons "github.com/arcology/consensus-engine/proto/tendermint/consensus"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	tmcon "github.com/arcology-network/consensus-engine/consensus"
+	cstypes "github.com/arcology-network/consensus-engine/consensus/types"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	"github.com/arcology-network/consensus-engine/p2p"
+	tmcons "github.com/arcology-network/consensus-engine/proto/tendermint/consensus"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 func WALToProto(msg tmcon.WALMessage) (*tmcons.WALMessage, error) {

@@ -12,9 +12,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/libs/service"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 // WebSocket handler
@@ -446,7 +446,7 @@ func (wsc *wsConnection) writeRoutine() {
 
 // All writes to the websocket must (re)set the write deadline.
 // If some writes don't set it while others do, they may timeout incorrectly
-// (https://github.com/arcology/consensus-engine/issues/553)
+// (https://github.com/arcology-network/consensus-engine/issues/553)
 func (wsc *wsConnection) writeMessageWithDeadline(msgType int, msg []byte) error {
 	if err := wsc.baseConn.SetWriteDeadline(time.Now().Add(wsc.writeWait)); err != nil {
 		return err

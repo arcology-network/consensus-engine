@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
+	e2e "github.com/arcology-network/consensus-engine/test/e2e/pkg"
 )
 
 func Start(testnet *e2e.Testnet) error {

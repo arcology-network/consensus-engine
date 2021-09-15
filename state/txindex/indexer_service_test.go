@@ -9,11 +9,11 @@ import (
 
 	db "github.com/tendermint/tm-db"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/state/txindex"
-	"github.com/arcology/consensus-engine/state/txindex/kv"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/state/txindex"
+	"github.com/arcology-network/consensus-engine/state/txindex/kv"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 func TestIndexerServiceIndexesBlocks(t *testing.T) {

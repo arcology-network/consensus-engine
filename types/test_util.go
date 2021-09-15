@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/version"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 func MakeCommit(blockID BlockID, height int64, round int32,

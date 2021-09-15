@@ -17,12 +17,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/crypto/sr25519"
-	"github.com/arcology/consensus-engine/libs/async"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/crypto/sr25519"
+	"github.com/arcology-network/consensus-engine/libs/async"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 )
 
 // Run go test -update from within this module

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //-----------------------------------------------------

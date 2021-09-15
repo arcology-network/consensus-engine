@@ -5,7 +5,7 @@ package consensus
 
 import (
 	fmt "fmt"
-	types "github.com/arcology/consensus-engine/proto/tendermint/types"
+	types "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"

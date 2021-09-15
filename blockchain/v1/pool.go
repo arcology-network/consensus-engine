@@ -3,9 +3,9 @@ package v1
 import (
 	"sort"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // BlockPool keeps track of the fast sync peers, block requests and block responses.

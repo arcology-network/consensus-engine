@@ -3,7 +3,7 @@ package commands
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/arcology/consensus-engine/consensus"
+	"github.com/arcology-network/consensus-engine/consensus"
 )
 
 // ReplayCmd allows replaying of messages from the WAL.

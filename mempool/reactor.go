@@ -6,13 +6,13 @@ import (
 	"math"
 	"time"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/monaco"
-	"github.com/arcology/consensus-engine/p2p"
-	protomem "github.com/arcology/consensus-engine/proto/tendermint/mempool"
-	"github.com/arcology/consensus-engine/types"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/monaco"
+	"github.com/arcology-network/consensus-engine/p2p"
+	protomem "github.com/arcology-network/consensus-engine/proto/tendermint/mempool"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

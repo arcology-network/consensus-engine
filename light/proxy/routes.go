@@ -1,13 +1,13 @@
 package proxy
 
 import (
-	"github.com/arcology/consensus-engine/libs/bytes"
-	lrpc "github.com/arcology/consensus-engine/light/rpc"
-	rpcclient "github.com/arcology/consensus-engine/rpc/client"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
-	rpcserver "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
-	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	lrpc "github.com/arcology-network/consensus-engine/light/rpc"
+	rpcclient "github.com/arcology-network/consensus-engine/rpc/client"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
+	rpcserver "github.com/arcology-network/consensus-engine/rpc/jsonrpc/server"
+	rpctypes "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 func RPCRoutes(c *lrpc.Client) map[string]*rpcserver.RPCFunc {

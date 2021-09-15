@@ -17,16 +17,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/abci/example/counter"
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	abciserver "github.com/arcology/consensus-engine/abci/server"
-	abci "github.com/arcology/consensus-engine/abci/types"
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	"github.com/arcology/consensus-engine/libs/service"
-	"github.com/arcology/consensus-engine/proxy"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/abci/example/counter"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	abciserver "github.com/arcology-network/consensus-engine/abci/server"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/proxy"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular
@@ -602,7 +602,7 @@ func TestMempoolTxsBytes(t *testing.T) {
 }
 
 // This will non-deterministically catch some concurrency failures like
-// https://github.com/arcology/consensus-engine/issues/3509
+// https://github.com/arcology-network/consensus-engine/issues/3509
 // TODO: all of the tests should probably also run using the remote proxy app
 // since otherwise we're not actually testing the concurrency of the mempool here!
 func TestMempoolRemoteAppConcurrency(t *testing.T) {

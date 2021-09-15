@@ -3,7 +3,7 @@ package p2p
 import (
 	"net"
 
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 // ConnSet is a lookup table for connections and all their ips.

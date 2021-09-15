@@ -4,8 +4,8 @@ package events
 import (
 	"fmt"
 
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 // ErrListenerWasRemoved is returned by AddEvent if the listener was removed.

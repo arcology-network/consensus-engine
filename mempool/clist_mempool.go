@@ -8,17 +8,17 @@ import (
 	"sync"
 	"sync/atomic"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	cfg "github.com/arcology/consensus-engine/config"
-	auto "github.com/arcology/consensus-engine/libs/autofile"
-	"github.com/arcology/consensus-engine/libs/clist"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/proxy"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	auto "github.com/arcology-network/consensus-engine/libs/autofile"
+	"github.com/arcology-network/consensus-engine/libs/clist"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/proxy"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // TxKeySize is the size of the transaction key index
@@ -602,7 +602,7 @@ func (mem *CListMempool) Update(
 		//   101 -> 102
 		// Mempool after:
 		//   100
-		// https://github.com/arcology/consensus-engine/issues/3322.
+		// https://github.com/arcology-network/consensus-engine/issues/3322.
 		if e, ok := mem.txsMap.Load(TxKey(tx)); ok {
 			mem.removeTx(tx, e.(*clist.CElement), false)
 		}

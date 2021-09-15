@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmtime "github.com/arcology/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
 )
 
 // ValidateTime does a basic time validation ensuring time does not drift too

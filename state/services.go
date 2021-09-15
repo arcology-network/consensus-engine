@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //------------------------------------------------------

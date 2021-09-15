@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	abciclient "github.com/arcology/consensus-engine/abci/client"
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	abciserver "github.com/arcology/consensus-engine/abci/server"
+	abciclient "github.com/arcology-network/consensus-engine/abci/client"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	abciserver "github.com/arcology-network/consensus-engine/abci/server"
 )
 
 func TestClientServerNoAddrPrefix(t *testing.T) {

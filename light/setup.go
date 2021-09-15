@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/arcology/consensus-engine/light/provider"
-	"github.com/arcology/consensus-engine/light/provider/http"
-	"github.com/arcology/consensus-engine/light/store"
+	"github.com/arcology-network/consensus-engine/light/provider"
+	"github.com/arcology-network/consensus-engine/light/provider/http"
+	"github.com/arcology-network/consensus-engine/light/store"
 )
 
 // NewHTTPClient initiates an instance of a light client using HTTP addresses

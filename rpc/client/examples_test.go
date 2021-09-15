@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
-	rpctest "github.com/arcology/consensus-engine/rpc/test"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	rpchttp "github.com/arcology-network/consensus-engine/rpc/client/http"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
+	rpctest "github.com/arcology-network/consensus-engine/rpc/test"
 )
 
 func ExampleHTTP_simple() {

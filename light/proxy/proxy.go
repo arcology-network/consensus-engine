@@ -6,10 +6,10 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
-	lrpc "github.com/arcology/consensus-engine/light/rpc"
-	rpcserver "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmpubsub "github.com/arcology-network/consensus-engine/libs/pubsub"
+	lrpc "github.com/arcology-network/consensus-engine/light/rpc"
+	rpcserver "github.com/arcology-network/consensus-engine/rpc/jsonrpc/server"
 )
 
 // A Proxy defines parameters for running an HTTP server proxy.

@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/libs/log"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
-	nm "github.com/arcology/consensus-engine/node"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/privval"
-	"github.com/arcology/consensus-engine/proxy"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
-	core_grpc "github.com/arcology/consensus-engine/rpc/grpc"
-	rpcclient "github.com/arcology/consensus-engine/rpc/jsonrpc/client"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
+	nm "github.com/arcology-network/consensus-engine/node"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/privval"
+	"github.com/arcology-network/consensus-engine/proxy"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
+	core_grpc "github.com/arcology-network/consensus-engine/rpc/grpc"
+	rpcclient "github.com/arcology-network/consensus-engine/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

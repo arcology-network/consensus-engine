@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto"
-	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
-	"github.com/arcology/consensus-engine/libs/protoio"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
+	"github.com/arcology-network/consensus-engine/libs/protoio"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 const (

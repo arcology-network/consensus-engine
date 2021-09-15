@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmcrypto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmcrypto "github.com/arcology-network/consensus-engine/proto/tendermint/crypto"
 )
 
 const ProofOpValue = "simple:v"

@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/libs/log"
 )
 
 func TestTracingLogger(t *testing.T) {

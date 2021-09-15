@@ -7,8 +7,8 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/arcology/consensus-engine/abci/types"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
+	"github.com/arcology-network/consensus-engine/abci/types"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
 )
 
 func main() {

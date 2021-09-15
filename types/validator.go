@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/arcology/consensus-engine/crypto"
-	ce "github.com/arcology/consensus-engine/crypto/encoding"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	ce "github.com/arcology-network/consensus-engine/crypto/encoding"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 // Volatile state for each Validator

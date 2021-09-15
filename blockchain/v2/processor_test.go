@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/arcology/consensus-engine/p2p"
-	tmState "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/p2p"
+	tmState "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // pcBlock is a test helper structure with simple types. Its purpose is to help with test readability.

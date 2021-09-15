@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/version"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 // RequestInfo contains all the information for sending

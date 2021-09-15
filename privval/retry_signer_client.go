@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // RetrySignerClient wraps SignerClient adding retry for each operation (except

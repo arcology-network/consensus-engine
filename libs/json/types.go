@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 var (

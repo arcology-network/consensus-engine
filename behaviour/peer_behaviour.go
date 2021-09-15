@@ -1,7 +1,7 @@
 package behaviour
 
 import (
-	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 // PeerBehaviour is a struct describing a behaviour a peer performed.

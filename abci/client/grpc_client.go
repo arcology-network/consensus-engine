@@ -9,10 +9,10 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/arcology/consensus-engine/abci/types"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/abci/types"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 var _ Client = (*grpcClient)(nil)

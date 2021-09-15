@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto"
-	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
-	privvalproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	cryptoenc "github.com/arcology-network/consensus-engine/crypto/encoding"
+	privvalproto "github.com/arcology-network/consensus-engine/proto/tendermint/privval"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // SignerClient implements PrivValidator.

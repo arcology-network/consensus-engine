@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 type ErrAddrBookNonRoutable struct {

@@ -9,16 +9,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	"github.com/arcology/consensus-engine/privval"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/rpc/client"
-	rpctest "github.com/arcology/consensus-engine/rpc/test"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	cryptoenc "github.com/arcology-network/consensus-engine/crypto/encoding"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/privval"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/rpc/client"
+	rpctest "github.com/arcology-network/consensus-engine/rpc/test"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // For some reason the empty node used in tests has a time of

@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/bytes"
-	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	"github.com/arcology-network/consensus-engine/libs/log"
 
-	"github.com/arcology/consensus-engine/config"
-	tmconn "github.com/arcology/consensus-engine/p2p/conn"
+	"github.com/arcology-network/consensus-engine/config"
+	tmconn "github.com/arcology-network/consensus-engine/p2p/conn"
 )
 
 func TestPeerBasic(t *testing.T) {

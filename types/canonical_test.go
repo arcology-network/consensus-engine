@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 func TestCanonicalizeBlockID(t *testing.T) {

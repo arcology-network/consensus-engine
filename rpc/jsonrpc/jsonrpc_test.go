@@ -16,13 +16,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 
-	client "github.com/arcology/consensus-engine/rpc/jsonrpc/client"
-	server "github.com/arcology/consensus-engine/rpc/jsonrpc/server"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	client "github.com/arcology-network/consensus-engine/rpc/jsonrpc/client"
+	server "github.com/arcology-network/consensus-engine/rpc/jsonrpc/server"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 // Client and Server should work over tcp or unix sockets

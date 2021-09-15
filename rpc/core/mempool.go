@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	mempl "github.com/arcology/consensus-engine/mempool"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
-	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	mempl "github.com/arcology-network/consensus-engine/mempool"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //-----------------------------------------------------------------------------

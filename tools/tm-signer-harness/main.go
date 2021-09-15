@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/privval"
-	"github.com/arcology/consensus-engine/tools/tm-signer-harness/internal"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/privval"
+	"github.com/arcology-network/consensus-engine/tools/tm-signer-harness/internal"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 const (

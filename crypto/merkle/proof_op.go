@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	tmcrypto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
+	tmcrypto "github.com/arcology-network/consensus-engine/proto/tendermint/crypto"
 )
 
 //----------------------------------------

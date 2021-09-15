@@ -1,8 +1,8 @@
 package crypto
 
 import (
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	"github.com/arcology/consensus-engine/libs/bytes"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
 )
 
 const (

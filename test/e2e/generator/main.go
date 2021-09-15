@@ -10,7 +10,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/libs/log"
 )
 
 const (

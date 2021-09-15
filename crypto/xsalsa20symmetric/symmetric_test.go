@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"github.com/arcology/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto"
 )
 
 func TestSimple(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 	"regexp"
 	"strings"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	"github.com/arcology/consensus-engine/libs/log"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 // HTTP + URI handler

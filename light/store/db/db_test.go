@@ -10,12 +10,12 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/types"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 func TestLast_FirstLightBlockHeight(t *testing.T) {

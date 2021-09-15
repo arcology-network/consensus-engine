@@ -1,7 +1,7 @@
 package types
 
 import (
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 var ProposalSignBytes func(chainID string, p *tmproto.Proposal) []byte

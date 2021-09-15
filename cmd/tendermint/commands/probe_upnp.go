@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	"github.com/arcology/consensus-engine/p2p/upnp"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/p2p/upnp"
 )
 
 // ProbeUpnpCmd adds capabilities to test the UPnP functionality.

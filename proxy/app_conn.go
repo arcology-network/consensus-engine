@@ -1,8 +1,8 @@
 package proxy
 
 import (
-	abcicli "github.com/arcology/consensus-engine/abci/client"
-	"github.com/arcology/consensus-engine/abci/types"
+	abcicli "github.com/arcology-network/consensus-engine/abci/client"
+	"github.com/arcology-network/consensus-engine/abci/types"
 )
 
 //go:generate mockery --case underscore --name AppConnConsensus|AppConnMempool|AppConnQuery|AppConnSnapshot

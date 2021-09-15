@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/arcology/consensus-engine/libs/bytes"
-	tmstrings "github.com/arcology/consensus-engine/libs/strings"
-	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	tmstrings "github.com/arcology-network/consensus-engine/libs/strings"
+	tmp2p "github.com/arcology-network/consensus-engine/proto/tendermint/p2p"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 const (

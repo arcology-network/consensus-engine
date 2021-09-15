@@ -8,13 +8,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/arcology/consensus-engine/libs/cmap"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	"github.com/arcology/consensus-engine/libs/service"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/p2p/conn"
-	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
+	"github.com/arcology-network/consensus-engine/libs/cmap"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p/conn"
+	tmp2p "github.com/arcology-network/consensus-engine/proto/tendermint/p2p"
 )
 
 type Peer = p2p.Peer

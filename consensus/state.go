@@ -11,22 +11,22 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	cstypes "github.com/arcology/consensus-engine/consensus/types"
-	"github.com/arcology/consensus-engine/crypto"
-	tmevents "github.com/arcology/consensus-engine/libs/events"
-	"github.com/arcology/consensus-engine/libs/fail"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/p2p"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	cstypes "github.com/arcology-network/consensus-engine/consensus/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	tmevents "github.com/arcology-network/consensus-engine/libs/events"
+	"github.com/arcology-network/consensus-engine/libs/fail"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/p2p"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
 )
 
 // Consensus sentinel errors
@@ -865,7 +865,7 @@ func (cs *State) handleMsg(mi msgInfo) {
 		// We probably don't want to stop the peer here. The vote does not
 		// necessarily comes from a malicious peer but can be just broadcasted by
 		// a typical peer.
-		// https://github.com/arcology/consensus-engine/issues/1281
+		// https://github.com/arcology-network/consensus-engine/issues/1281
 		// }
 
 		// NOTE: the vote is broadcast to peers by the reactor listening
@@ -1991,7 +1991,7 @@ func (cs *State) tryAddVote(vote *types.Vote, peerID p2p.ID) (bool, error) {
 			// 1) bad peer OR
 			// 2) not a bad peer? this can also err sometimes with "Unexpected step" OR
 			// 3) tmkms use with multiple validators connecting to a single tmkms instance
-			// 		(https://github.com/arcology/consensus-engine/issues/3839).
+			// 		(https://github.com/arcology-network/consensus-engine/issues/3839).
 			cs.Logger.Info("failed attempting to add vote", "err", err)
 			return added, ErrAddingVote
 		}

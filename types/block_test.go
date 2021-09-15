@@ -15,16 +15,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/merkle"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	"github.com/arcology/consensus-engine/libs/bits"
-	"github.com/arcology/consensus-engine/libs/bytes"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	tmtime "github.com/arcology/consensus-engine/types/time"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/libs/bits"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 func TestMain(m *testing.M) {

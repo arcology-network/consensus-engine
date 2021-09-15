@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/p2p"
-	p2pmocks "github.com/arcology/consensus-engine/p2p/mocks"
-	"github.com/arcology/consensus-engine/statesync/mocks"
+	"github.com/arcology-network/consensus-engine/p2p"
+	p2pmocks "github.com/arcology-network/consensus-engine/p2p/mocks"
+	"github.com/arcology-network/consensus-engine/statesync/mocks"
 )
 
 func TestSnapshot_Key(t *testing.T) {

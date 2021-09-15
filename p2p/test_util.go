@@ -5,14 +5,14 @@ import (
 	"net"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 
-	"github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/p2p/conn"
+	"github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/p2p/conn"
 )
 
 const testCh = 0x01

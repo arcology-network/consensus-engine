@@ -9,9 +9,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	nm "github.com/arcology/consensus-engine/node"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	nm "github.com/arcology-network/consensus-engine/node"
 )
 
 var (

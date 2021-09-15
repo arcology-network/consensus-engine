@@ -8,14 +8,14 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	cryptoenc "github.com/arcology/consensus-engine/crypto/encoding"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	cryptoproto "github.com/arcology/consensus-engine/proto/tendermint/crypto"
-	privproto "github.com/arcology/consensus-engine/proto/tendermint/privval"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	cryptoenc "github.com/arcology-network/consensus-engine/crypto/encoding"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	cryptoproto "github.com/arcology-network/consensus-engine/proto/tendermint/crypto"
+	privproto "github.com/arcology-network/consensus-engine/proto/tendermint/privval"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 var stamp = time.Date(2019, 10, 13, 16, 14, 44, 0, time.UTC)

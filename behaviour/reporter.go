@@ -3,8 +3,8 @@ package behaviour
 import (
 	"errors"
 
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/p2p"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 // Reporter provides an interface for reactors to report the behaviour

@@ -3,8 +3,8 @@ package privval
 import (
 	"time"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/libs/service"
 )
 
 const (

@@ -10,16 +10,16 @@ import (
 	"github.com/gogo/protobuf/proto"
 	gogotypes "github.com/gogo/protobuf/types"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/merkle"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	"github.com/arcology/consensus-engine/libs/bits"
-	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/libs/bits"
+	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 const (

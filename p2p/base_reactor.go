@@ -1,8 +1,8 @@
 package p2p
 
 import (
-	"github.com/arcology/consensus-engine/libs/service"
-	"github.com/arcology/consensus-engine/p2p/conn"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/p2p/conn"
 )
 
 // Reactor is responsible for handling incoming messages on one or more

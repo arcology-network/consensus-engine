@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/arcology/consensus-engine/light/provider"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/light/provider"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 var errNoResp = errors.New("no response from provider")

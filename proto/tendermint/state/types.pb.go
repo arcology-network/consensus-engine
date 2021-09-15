@@ -5,9 +5,9 @@ package state
 
 import (
 	fmt "fmt"
-	types "github.com/arcology/consensus-engine/abci/types"
-	types1 "github.com/arcology/consensus-engine/proto/tendermint/types"
-	version "github.com/arcology/consensus-engine/proto/tendermint/version"
+	types "github.com/arcology-network/consensus-engine/abci/types"
+	types1 "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	version "github.com/arcology-network/consensus-engine/proto/tendermint/version"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"

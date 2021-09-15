@@ -8,17 +8,17 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/privval"
-	"github.com/arcology/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/privval"
+	"github.com/arcology-network/consensus-engine/state"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // Test harness error codes (which act as exit codes when the test harness fails).

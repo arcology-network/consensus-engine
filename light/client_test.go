@@ -11,12 +11,12 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	"github.com/arcology/consensus-engine/light"
-	"github.com/arcology/consensus-engine/light/provider"
-	mockp "github.com/arcology/consensus-engine/light/provider/mock"
-	dbs "github.com/arcology/consensus-engine/light/store/db"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/light"
+	"github.com/arcology-network/consensus-engine/light/provider"
+	mockp "github.com/arcology-network/consensus-engine/light/provider/mock"
+	dbs "github.com/arcology-network/consensus-engine/light/store/db"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

@@ -3,8 +3,8 @@ package types
 import (
 	"time"
 
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
 )
 
 // Canonical* wraps the structs in types for amino encoding them for use in SignBytes / the Signable interface.

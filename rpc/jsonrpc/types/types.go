@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
 )
 
 // a wrapper to emulate a sum type: jsonrpcid = string | int

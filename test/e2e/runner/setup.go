@@ -19,12 +19,12 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/p2p"
-	"github.com/arcology/consensus-engine/privval"
-	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/privval"
+	e2e "github.com/arcology-network/consensus-engine/test/e2e/pkg"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

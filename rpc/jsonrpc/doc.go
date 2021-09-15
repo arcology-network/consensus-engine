@@ -81,5 +81,5 @@
 //
 // Examples
 //
-// - [Tendermint](https://github.com/arcology/consensus-engine/blob/master/rpc/core/routes.go)
+// - [Tendermint](https://github.com/arcology-network/consensus-engine/blob/master/rpc/core/routes.go)
 package jsonrpc

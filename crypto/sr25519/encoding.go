@@ -1,8 +1,8 @@
 package sr25519
 
 import (
-	"github.com/arcology/consensus-engine/crypto"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/crypto"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
 )
 
 var _ crypto.PrivKey = PrivKey{}

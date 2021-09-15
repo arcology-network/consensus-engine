@@ -8,14 +8,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/arcology/consensus-engine/light/provider"
-	rpcclient "github.com/arcology/consensus-engine/rpc/client"
-	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/light/provider"
+	rpcclient "github.com/arcology-network/consensus-engine/rpc/client"
+	rpchttp "github.com/arcology-network/consensus-engine/rpc/client/http"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 var (
-	// This is very brittle, see: https://github.com/arcology/consensus-engine/issues/4740
+	// This is very brittle, see: https://github.com/arcology-network/consensus-engine/issues/4740
 	regexpMissingHeight = regexp.MustCompile(`height \d+ (must be less than or equal to|is not available)`)
 
 	maxRetryAttempts      = 10

@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/libs/pubsub/query"
-	"github.com/arcology/consensus-engine/state/txindex"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/libs/pubsub/query"
+	"github.com/arcology-network/consensus-engine/state/txindex"
 )
 
 var _ txindex.TxIndexer = (*TxIndex)(nil)

@@ -8,8 +8,8 @@ import (
 	"sort"
 	"time"
 
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/p2p"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 // snapshotKey is a snapshot key used for lookups.

@@ -5,12 +5,12 @@ import (
 	"strings"
 	"testing"
 
-	abcicli "github.com/arcology/consensus-engine/abci/client"
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	"github.com/arcology/consensus-engine/abci/server"
-	"github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	abcicli "github.com/arcology-network/consensus-engine/abci/client"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	"github.com/arcology-network/consensus-engine/abci/server"
+	"github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 )
 
 //----------------------------------------

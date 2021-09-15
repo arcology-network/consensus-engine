@@ -6,9 +6,9 @@ import (
 	"io"
 	"log"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/async"
-	sc "github.com/arcology/consensus-engine/p2p/conn"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/async"
+	sc "github.com/arcology-network/consensus-engine/p2p/conn"
 )
 
 func Fuzz(data []byte) int {

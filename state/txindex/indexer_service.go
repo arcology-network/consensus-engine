@@ -3,9 +3,9 @@ package txindex
 import (
 	"context"
 
-	"github.com/arcology/consensus-engine/libs/service"
+	"github.com/arcology-network/consensus-engine/libs/service"
 
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

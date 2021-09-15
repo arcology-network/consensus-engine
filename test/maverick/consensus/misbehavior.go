@@ -3,10 +3,10 @@ package consensus
 import (
 	"fmt"
 
-	tmcon "github.com/arcology/consensus-engine/consensus"
-	cstypes "github.com/arcology/consensus-engine/consensus/types"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	"github.com/arcology/consensus-engine/types"
+	tmcon "github.com/arcology-network/consensus-engine/consensus"
+	cstypes "github.com/arcology-network/consensus-engine/consensus/types"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // MisbehaviorList encompasses a list of all possible behaviors

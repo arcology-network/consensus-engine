@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
 )
 
 // IsConnTimeout returns a boolean indicating whether the error is known to

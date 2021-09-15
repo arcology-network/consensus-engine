@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	e2e "github.com/arcology/consensus-engine/test/e2e/pkg"
-	"github.com/arcology/consensus-engine/types"
+	e2e "github.com/arcology-network/consensus-engine/test/e2e/pkg"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 // Tests that validator sets are available and correct according to

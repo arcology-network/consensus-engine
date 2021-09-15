@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/libs/bytes"
-	"github.com/arcology/consensus-engine/rpc/client/mock"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
+	"github.com/arcology-network/consensus-engine/libs/bytes"
+	"github.com/arcology-network/consensus-engine/rpc/client/mock"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
 )
 
 func TestStatus(t *testing.T) {

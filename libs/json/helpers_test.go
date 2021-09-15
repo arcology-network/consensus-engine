@@ -3,7 +3,7 @@ package json_test
 import (
 	"time"
 
-	"github.com/arcology/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/libs/json"
 )
 
 // Register Car, an instance of the Vehicle interface.

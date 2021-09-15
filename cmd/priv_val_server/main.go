@@ -5,12 +5,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
-	tmos "github.com/arcology/consensus-engine/libs/os"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
 
-	"github.com/arcology/consensus-engine/privval"
+	"github.com/arcology-network/consensus-engine/privval"
 )
 
 func main() {

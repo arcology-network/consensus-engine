@@ -9,17 +9,17 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	"github.com/arcology/consensus-engine/evidence"
-	"github.com/arcology/consensus-engine/evidence/mocks"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	sm "github.com/arcology/consensus-engine/state"
-	smmocks "github.com/arcology/consensus-engine/state/mocks"
-	"github.com/arcology/consensus-engine/types"
-	"github.com/arcology/consensus-engine/version"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	"github.com/arcology-network/consensus-engine/evidence"
+	"github.com/arcology-network/consensus-engine/evidence/mocks"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	sm "github.com/arcology-network/consensus-engine/state"
+	smmocks "github.com/arcology-network/consensus-engine/state/mocks"
+	"github.com/arcology-network/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 func TestVerifyLightClientAttack_Lunatic(t *testing.T) {

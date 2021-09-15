@@ -3,10 +3,10 @@ package types
 import (
 	"fmt"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
-	tmquery "github.com/arcology/consensus-engine/libs/pubsub/query"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	tmpubsub "github.com/arcology-network/consensus-engine/libs/pubsub"
+	tmquery "github.com/arcology-network/consensus-engine/libs/pubsub/query"
 )
 
 // Reserved event types (alphabetically sorted).

@@ -6,7 +6,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	tmnet "github.com/arcology/consensus-engine/libs/net"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
 )
 
 // Config is an gRPC server configuration.

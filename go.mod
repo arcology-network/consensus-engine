@@ -1,4 +1,4 @@
-module github.com/arcology/consensus-engine
+module github.com/arcology-network/consensus-engine
 
 go 1.15
 

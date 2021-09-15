@@ -1,10 +1,10 @@
 package checktx
 
 import (
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	"github.com/arcology/consensus-engine/config"
-	mempl "github.com/arcology/consensus-engine/mempool"
-	"github.com/arcology/consensus-engine/proxy"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	"github.com/arcology-network/consensus-engine/config"
+	mempl "github.com/arcology-network/consensus-engine/mempool"
+	"github.com/arcology-network/consensus-engine/proxy"
 )
 
 var mempool mempl.Mempool

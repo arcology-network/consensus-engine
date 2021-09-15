@@ -5,9 +5,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
-	p2pconn "github.com/arcology/consensus-engine/p2p/conn"
+	"github.com/arcology-network/consensus-engine/crypto"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
+	p2pconn "github.com/arcology-network/consensus-engine/p2p/conn"
 )
 
 // Socket errors.

@@ -14,14 +14,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	flow "github.com/arcology/consensus-engine/libs/flowrate"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	"github.com/arcology/consensus-engine/libs/protoio"
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/libs/timer"
-	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
+	flow "github.com/arcology-network/consensus-engine/libs/flowrate"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	"github.com/arcology-network/consensus-engine/libs/protoio"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/libs/timer"
+	tmp2p "github.com/arcology-network/consensus-engine/proto/tendermint/p2p"
 )
 
 const (
@@ -609,7 +609,7 @@ FOR_LOOP:
 		switch pkt := packet.Sum.(type) {
 		case *tmp2p.Packet_PacketPing:
 			// TODO: prevent abuse, as they cause flush()'s.
-			// https://github.com/arcology/consensus-engine/issues/1190
+			// https://github.com/arcology-network/consensus-engine/issues/1190
 			c.Logger.Debug("Receive Ping")
 			select {
 			case c.pong <- struct{}{}:

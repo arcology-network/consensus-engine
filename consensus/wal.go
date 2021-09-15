@@ -11,13 +11,13 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	auto "github.com/arcology/consensus-engine/libs/autofile"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmos "github.com/arcology/consensus-engine/libs/os"
-	"github.com/arcology/consensus-engine/libs/service"
-	tmcons "github.com/arcology/consensus-engine/proto/tendermint/consensus"
-	tmtime "github.com/arcology/consensus-engine/types/time"
+	auto "github.com/arcology-network/consensus-engine/libs/autofile"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmos "github.com/arcology-network/consensus-engine/libs/os"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmcons "github.com/arcology-network/consensus-engine/proto/tendermint/consensus"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
 )
 
 const (

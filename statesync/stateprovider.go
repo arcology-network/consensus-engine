@@ -8,17 +8,17 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
-	"github.com/arcology/consensus-engine/light"
-	lightprovider "github.com/arcology/consensus-engine/light/provider"
-	lighthttp "github.com/arcology/consensus-engine/light/provider/http"
-	lightrpc "github.com/arcology/consensus-engine/light/rpc"
-	lightdb "github.com/arcology/consensus-engine/light/store/db"
-	tmstate "github.com/arcology/consensus-engine/proto/tendermint/state"
-	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/types"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/light"
+	lightprovider "github.com/arcology-network/consensus-engine/light/provider"
+	lighthttp "github.com/arcology-network/consensus-engine/light/provider/http"
+	lightrpc "github.com/arcology-network/consensus-engine/light/rpc"
+	lightdb "github.com/arcology-network/consensus-engine/light/store/db"
+	tmstate "github.com/arcology-network/consensus-engine/proto/tendermint/state"
+	rpchttp "github.com/arcology-network/consensus-engine/rpc/client/http"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 //go:generate mockery --case underscore --name StateProvider

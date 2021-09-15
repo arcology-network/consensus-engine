@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 )
 
 func TestWriteFileAtomic(t *testing.T) {

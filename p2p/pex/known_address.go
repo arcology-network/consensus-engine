@@ -3,7 +3,7 @@ package pex
 import (
 	"time"
 
-	"github.com/arcology/consensus-engine/p2p"
+	"github.com/arcology-network/consensus-engine/p2p"
 )
 
 // knownAddress tracks information about a known network address

@@ -4,8 +4,8 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	"github.com/arcology/consensus-engine/proxy"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	"github.com/arcology-network/consensus-engine/proxy"
 )
 
 func BenchmarkReap(b *testing.B) {

@@ -6,8 +6,8 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	bcproto "github.com/arcology/consensus-engine/proto/tendermint/blockchain"
-	"github.com/arcology/consensus-engine/types"
+	bcproto "github.com/arcology-network/consensus-engine/proto/tendermint/blockchain"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 const (

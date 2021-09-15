@@ -11,9 +11,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/libs/cli"
-	rpchttp "github.com/arcology/consensus-engine/rpc/client/http"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/libs/cli"
+	rpchttp "github.com/arcology-network/consensus-engine/rpc/client/http"
 )
 
 var dumpCmd = &cobra.Command{

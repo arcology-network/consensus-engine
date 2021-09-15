@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/libs/service"
-	tmsync "github.com/arcology/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/libs/service"
+	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
 )
 
 const (
@@ -129,7 +129,7 @@ func (r *ReqRes) InvokeCallback() {
 // marked done and SetCallback is called before calling GetCallback as that
 // will invoke the callback twice and create a potential race condition.
 //
-// ref: https://github.com/arcology/consensus-engine/issues/5439
+// ref: https://github.com/arcology-network/consensus-engine/issues/5439
 func (r *ReqRes) GetCallback() func(*types.Response) {
 	r.mtx.Lock()
 	defer r.mtx.Unlock()

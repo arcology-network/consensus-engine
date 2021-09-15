@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	tmflags "github.com/arcology/consensus-engine/libs/cli/flags"
-	"github.com/arcology/consensus-engine/libs/log"
+	tmflags "github.com/arcology-network/consensus-engine/libs/cli/flags"
+	"github.com/arcology-network/consensus-engine/libs/log"
 )
 
 const (

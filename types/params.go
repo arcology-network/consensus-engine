@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/crypto/tmhash"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/crypto/tmhash"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 const (

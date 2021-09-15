@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	types "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	types "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
 )
 
 func unmarshalResponseBytes(

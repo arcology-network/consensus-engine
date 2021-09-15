@@ -14,16 +14,16 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	cfg "github.com/arcology/consensus-engine/config"
-	"github.com/arcology/consensus-engine/crypto"
-	"github.com/arcology/consensus-engine/libs/log"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmstore "github.com/arcology/consensus-engine/proto/tendermint/store"
-	tmversion "github.com/arcology/consensus-engine/proto/tendermint/version"
-	sm "github.com/arcology/consensus-engine/state"
-	"github.com/arcology/consensus-engine/types"
-	tmtime "github.com/arcology/consensus-engine/types/time"
-	"github.com/arcology/consensus-engine/version"
+	cfg "github.com/arcology-network/consensus-engine/config"
+	"github.com/arcology-network/consensus-engine/crypto"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmstore "github.com/arcology-network/consensus-engine/proto/tendermint/store"
+	tmversion "github.com/arcology-network/consensus-engine/proto/tendermint/version"
+	sm "github.com/arcology-network/consensus-engine/state"
+	"github.com/arcology-network/consensus-engine/types"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/version"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular

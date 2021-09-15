@@ -15,14 +15,14 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/arcology/consensus-engine/libs/log"
-	tmnet "github.com/arcology/consensus-engine/libs/net"
+	"github.com/arcology-network/consensus-engine/libs/log"
+	tmnet "github.com/arcology-network/consensus-engine/libs/net"
 
-	abcicli "github.com/arcology/consensus-engine/abci/client"
-	"github.com/arcology/consensus-engine/abci/example/code"
-	"github.com/arcology/consensus-engine/abci/example/kvstore"
-	abciserver "github.com/arcology/consensus-engine/abci/server"
-	"github.com/arcology/consensus-engine/abci/types"
+	abcicli "github.com/arcology-network/consensus-engine/abci/client"
+	"github.com/arcology-network/consensus-engine/abci/example/code"
+	"github.com/arcology-network/consensus-engine/abci/example/kvstore"
+	abciserver "github.com/arcology-network/consensus-engine/abci/server"
+	"github.com/arcology-network/consensus-engine/abci/types"
 )
 
 func init() {

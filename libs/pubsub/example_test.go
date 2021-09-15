@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/libs/log"
 
-	"github.com/arcology/consensus-engine/libs/pubsub"
-	"github.com/arcology/consensus-engine/libs/pubsub/query"
+	"github.com/arcology-network/consensus-engine/libs/pubsub"
+	"github.com/arcology-network/consensus-engine/libs/pubsub/query"
 )
 
 func TestExample(t *testing.T) {

@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	tmp2p "github.com/arcology/consensus-engine/proto/tendermint/p2p"
+	tmp2p "github.com/arcology-network/consensus-engine/proto/tendermint/p2p"
 )
 
 // EmptyNetAddress defines the string representation of an empty NetAddress

@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abcimocks "github.com/arcology/consensus-engine/abci/client/mocks"
-	"github.com/arcology/consensus-engine/proxy/mocks"
+	abcimocks "github.com/arcology-network/consensus-engine/abci/client/mocks"
+	"github.com/arcology-network/consensus-engine/proxy/mocks"
 )
 
 func TestAppConns_Start_Stop(t *testing.T) {

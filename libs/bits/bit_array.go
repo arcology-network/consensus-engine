@@ -7,9 +7,9 @@ import (
 	"strings"
 	"sync"
 
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
-	tmprotobits "github.com/arcology/consensus-engine/proto/tendermint/libs/bits"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
+	tmprotobits "github.com/arcology-network/consensus-engine/proto/tendermint/libs/bits"
 )
 
 // BitArray is a thread-safe implementation of a bit array.

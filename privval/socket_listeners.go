@@ -4,8 +4,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	p2pconn "github.com/arcology/consensus-engine/p2p/conn"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	p2pconn "github.com/arcology-network/consensus-engine/p2p/conn"
 )
 
 const (
@@ -140,7 +140,7 @@ func (ln *UnixListener) Accept() (net.Conn, error) {
 	conn := newTimeoutConn(tc, ln.timeoutReadWrite)
 
 	// TODO: wrap in something that authenticates
-	// with a MAC - https://github.com/arcology/consensus-engine/issues/3099
+	// with a MAC - https://github.com/arcology-network/consensus-engine/issues/3099
 
 	return conn, nil
 }

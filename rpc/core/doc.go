@@ -2,7 +2,7 @@
 Package core defines the Tendermint RPC endpoints.
 
 Tendermint ships with its own JSONRPC library -
-https://github.com/arcology/consensus-engine/tree/master/rpc/jsonrpc.
+https://github.com/arcology-network/consensus-engine/tree/master/rpc/jsonrpc.
 
 ## Get the list
 

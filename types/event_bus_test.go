@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	tmpubsub "github.com/arcology/consensus-engine/libs/pubsub"
-	tmquery "github.com/arcology/consensus-engine/libs/pubsub/query"
-	tmrand "github.com/arcology/consensus-engine/libs/rand"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	tmpubsub "github.com/arcology-network/consensus-engine/libs/pubsub"
+	tmquery "github.com/arcology-network/consensus-engine/libs/pubsub/query"
+	tmrand "github.com/arcology-network/consensus-engine/libs/rand"
 )
 
 func TestEventBusPublishEventTx(t *testing.T) {

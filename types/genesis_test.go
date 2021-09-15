@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arcology/consensus-engine/crypto/ed25519"
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	tmtime "github.com/arcology/consensus-engine/types/time"
+	"github.com/arcology-network/consensus-engine/crypto/ed25519"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	tmtime "github.com/arcology-network/consensus-engine/types/time"
 )
 
 func TestGenesisBad(t *testing.T) {

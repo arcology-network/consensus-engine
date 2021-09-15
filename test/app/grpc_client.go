@@ -7,8 +7,8 @@ import (
 
 	"context"
 
-	tmjson "github.com/arcology/consensus-engine/libs/json"
-	coregrpc "github.com/arcology/consensus-engine/rpc/grpc"
+	tmjson "github.com/arcology-network/consensus-engine/libs/json"
+	coregrpc "github.com/arcology-network/consensus-engine/rpc/grpc"
 )
 
 var grpcAddr = "tcp://localhost:36656"

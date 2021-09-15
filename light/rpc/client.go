@@ -9,15 +9,15 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	abci "github.com/arcology/consensus-engine/abci/types"
-	"github.com/arcology/consensus-engine/crypto/merkle"
-	tmbytes "github.com/arcology/consensus-engine/libs/bytes"
-	tmmath "github.com/arcology/consensus-engine/libs/math"
-	service "github.com/arcology/consensus-engine/libs/service"
-	rpcclient "github.com/arcology/consensus-engine/rpc/client"
-	ctypes "github.com/arcology/consensus-engine/rpc/core/types"
-	rpctypes "github.com/arcology/consensus-engine/rpc/jsonrpc/types"
-	"github.com/arcology/consensus-engine/types"
+	abci "github.com/arcology-network/consensus-engine/abci/types"
+	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
+	tmmath "github.com/arcology-network/consensus-engine/libs/math"
+	service "github.com/arcology-network/consensus-engine/libs/service"
+	rpcclient "github.com/arcology-network/consensus-engine/rpc/client"
+	ctypes "github.com/arcology-network/consensus-engine/rpc/core/types"
+	rpctypes "github.com/arcology-network/consensus-engine/rpc/jsonrpc/types"
+	"github.com/arcology-network/consensus-engine/types"
 )
 
 var errNegOrZeroHeight = errors.New("negative or zero height")

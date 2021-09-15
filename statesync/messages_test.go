@@ -7,8 +7,8 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	ssproto "github.com/arcology/consensus-engine/proto/tendermint/statesync"
-	tmproto "github.com/arcology/consensus-engine/proto/tendermint/types"
+	ssproto "github.com/arcology-network/consensus-engine/proto/tendermint/statesync"
+	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 )
 
 func TestValidateMsg(t *testing.T) {
