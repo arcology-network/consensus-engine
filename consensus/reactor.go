@@ -15,6 +15,7 @@ import (
 	tmjson "github.com/arcology-network/consensus-engine/libs/json"
 	"github.com/arcology-network/consensus-engine/libs/log"
 	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/monaco"
 	"github.com/arcology-network/consensus-engine/p2p"
 	tmcons "github.com/arcology-network/consensus-engine/proto/tendermint/consensus"
 	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
@@ -67,6 +68,10 @@ func NewReactor(consensusState *State, waitSync bool, options ...ReactorOption) 
 	}
 
 	return conR
+}
+
+func (conR *Reactor) SetBackendProxy(backend monaco.BackendProxy) {
+	conR.conS.SetBackendProxy(backend)
 }
 
 // OnStart implements BaseService by subscribing to events, which later will be

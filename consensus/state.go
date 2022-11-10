@@ -22,6 +22,7 @@ import (
 	tmos "github.com/arcology-network/consensus-engine/libs/os"
 	"github.com/arcology-network/consensus-engine/libs/service"
 	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/monaco"
 	"github.com/arcology-network/consensus-engine/p2p"
 	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
 	sm "github.com/arcology-network/consensus-engine/state"
@@ -37,6 +38,7 @@ var (
 	ErrSignatureFoundInPastBlocks = errors.New("found signature from the same key")
 
 	errPubKeyIsNotSet = errors.New("pubkey is not set. Look for \"Can't get private validator pubkey\" errors")
+	consensusStart    = time.Now()
 )
 
 var msgQueueSize = 10000
@@ -143,6 +145,12 @@ type State struct {
 
 	// for reporting metrics
 	metrics *Metrics
+	// Num of txs in the previous block.
+	ntxsOfPrevious int
+	// Num of txs in the block before the previous block.
+	ntxsOfBeforePrevious int
+
+	backend monaco.BackendProxy
 }
 
 // StateOption sets an optional parameter on the State.
@@ -173,6 +181,7 @@ func NewState(
 		evpool:           evpool,
 		evsw:             tmevents.NewEventSwitch(),
 		metrics:          NopMetrics(),
+		ntxsOfPrevious:   0,
 	}
 
 	// set function defaults (may be overwritten before calling Start)
@@ -196,6 +205,10 @@ func NewState(
 
 	cs.rsc = cs.RoundState.DeepCopy()
 	return cs
+}
+
+func (cs *State) SetBackendProxy(backend monaco.BackendProxy) {
+	cs.backend = backend
 }
 
 // SetLogger implements Service.
@@ -309,6 +322,7 @@ func (cs *State) LoadCommit(height int64) *types.Commit {
 // OnStart loads the latest state via the WAL, and starts the timeout and
 // receive routines.
 func (cs *State) OnStart() error {
+	cs.backend.SwitchToConsensus()
 	// We may set the WAL in testing before calling Start, so only OpenWAL if its
 	// still the nilWAL.
 	if _, ok := cs.wal.(nilWAL); ok {
@@ -972,7 +986,9 @@ func (cs *State) handleTxsAvailable() {
 // Used internally by handleTimeout and handleMsg to make state transitions
 
 // Enter: `timeoutNewHeight` by startTime (commitTime+timeoutCommit),
-// 	or, if SkipTimeoutCommit==true, after receiving all precommits from (height,round-1)
+//
+//	or, if SkipTimeoutCommit==true, after receiving all precommits from (height,round-1)
+//
 // Enter: `timeoutPrecommits` after any +2/3 precommits from (height,round-1)
 // Enter: +2/3 precommits for nil at (height,round-1)
 // Enter: +2/3 prevotes any or +2/3 precommits for block or any from (height, round)
@@ -1057,7 +1073,9 @@ func (cs *State) needProofBlock(height int64) bool {
 
 // Enter (CreateEmptyBlocks): from enterNewRound(height,round)
 // Enter (CreateEmptyBlocks, CreateEmptyBlocksInterval > 0 ):
-// 		after enterNewRound(height,round), after timeout of CreateEmptyBlocksInterval
+//
+//	after enterNewRound(height,round), after timeout of CreateEmptyBlocksInterval
+//
 // Enter (!CreateEmptyBlocks) : after enterNewRound(height,round), once txs are in the mempool
 func (cs *State) enterPropose(height int64, round int32) {
 	logger := cs.Logger.With("height", height, "round", round)
@@ -1612,7 +1630,7 @@ func (cs *State) finalizeCommit(height int64) {
 		// but may differ from the LastCommit included in the next block
 		precommits := cs.Votes.Precommits(cs.CommitRound)
 		seenCommit := precommits.MakeCommit()
-		go cs.blockStore.SaveBlock(block, blockParts, seenCommit)
+		cs.blockStore.SaveBlockAsync(block, blockParts, seenCommit)
 	} else {
 		// Happens during replay if we already saved the block but didn't commit
 		logger.Debug("calling finalizeCommit on already stored block", "height", block.Height)
@@ -1653,6 +1671,8 @@ func (cs *State) finalizeCommit(height int64) {
 		retainHeight int64
 	)
 
+	cs.metrics.ReachingConsensusSeconds.Observe(time.Since(consensusStart).Seconds())
+	cs.metrics.ReachingConsensusSecondsGauge.Set(time.Since(consensusStart).Seconds())
 	stateCopy, retainHeight, err = cs.blockExec.ApplyBlockEx(
 		stateCopy,
 		types.BlockID{
@@ -1660,6 +1680,7 @@ func (cs *State) finalizeCommit(height int64) {
 			PartSetHeader: blockParts.Header(),
 		},
 		block,
+		false,
 	)
 	if err != nil {
 		logger.Error("failed to apply block", "err", err)
@@ -1683,6 +1704,7 @@ func (cs *State) finalizeCommit(height int64) {
 
 	// NewHeightStep!
 	cs.updateToState(stateCopy)
+	consensusStart = time.Now()
 
 	fail.Fail() // XXX
 
@@ -1793,15 +1815,20 @@ func (cs *State) recordMetrics(height int64, block *types.Block) {
 	if height > 1 {
 		lastBlockMeta := cs.blockStore.LoadBlockMeta(height - 1)
 		if lastBlockMeta != nil {
+			interval := block.Time.Sub(lastBlockMeta.Header.Time).Seconds()
 			cs.metrics.BlockIntervalSeconds.Observe(
-				block.Time.Sub(lastBlockMeta.Header.Time).Seconds(),
+				interval,
 			)
 			cs.metrics.BlockInterval.Observe(
-				block.Time.Sub(lastBlockMeta.Header.Time).Seconds(),
+				interval,
 			)
+			cs.metrics.BlockIntervalGauge.Set(interval)
+			cs.metrics.RealTimeTPS.Set(float64(cs.ntxsOfBeforePrevious) / interval)
+			cs.ntxsOfBeforePrevious = cs.ntxsOfPrevious
 		}
 	}
 
+	cs.ntxsOfPrevious = len(block.Data.Hashes)
 	cs.metrics.NumTxs.Set(float64(len(block.Data.Hashes)))
 	cs.metrics.TotalTxs.Add(float64(len(block.Data.Hashes)))
 	cs.metrics.TxsProcessed.Add(float64(len(block.Data.Hashes)))
@@ -1903,7 +1930,7 @@ func (cs *State) addProposalBlockPart(msg *BlockPartMessage, peerID p2p.ID) (add
 		}
 
 		cs.ProposalBlock = block
-		go cs.blockExec.AddToMempool(block.Data.Txs)
+		go cs.blockExec.AddToMempool(block.Data.Txs, "proposer")
 
 		// NOTE: it's possible to receive complete proposal blocks for future rounds without having the proposal
 		cs.Logger.Info("received complete proposal block", "height", cs.ProposalBlock.Height, "hash", cs.ProposalBlock.Hash())

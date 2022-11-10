@@ -213,7 +213,7 @@ func (memR *Reactor) Receive(chID byte, src p2p.Peer, msgBytes []byte) {
 		memR.Switch.StopPeerForError(src, err)
 		return
 	}
-	memR.Logger.Debug("Receive", "src", src, "chId", chID, "msg", msg)
+	// memR.Logger.Debug("Receive", "src", src, "chId", chID, "msg", msg)
 
 	txInfo := TxInfo{SenderID: memR.ids.GetForPeer(src)}
 	if src != nil {
@@ -224,7 +224,7 @@ func (memR *Reactor) Receive(chID byte, src p2p.Peer, msgBytes []byte) {
 	for i := range txs {
 		txs[i] = msg.Txs[i]
 	}
-	memR.backend.AddToMempool(txs)
+	memR.backend.AddToMempool(txs, string(src.ID()))
 	// broadcasting happens from go routines per peer
 }
 

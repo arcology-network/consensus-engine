@@ -11,6 +11,7 @@ import (
 	"github.com/arcology-network/consensus-engine/libs/log"
 	"github.com/arcology-network/consensus-engine/libs/service"
 	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	"github.com/arcology-network/consensus-engine/monaco"
 	"github.com/arcology-network/consensus-engine/p2p"
 	"github.com/arcology-network/consensus-engine/types"
 )
@@ -76,6 +77,8 @@ type BlockPool struct {
 
 	requestsCh chan<- BlockRequest
 	errorsCh   chan<- peerError
+
+	backend monaco.BackendProxy
 }
 
 // NewBlockPool returns a new BlockPool with the height equal to start. Block
@@ -93,6 +96,10 @@ func NewBlockPool(start int64, requestsCh chan<- BlockRequest, errorsCh chan<- p
 	}
 	bp.BaseService = *service.NewBaseService(nil, "BlockPool", bp)
 	return bp
+}
+
+func (pool *BlockPool) SetBackendProxy(backend monaco.BackendProxy) {
+	pool.backend = backend
 }
 
 // OnStart implements service.Service by spawning requesters routine and recording
@@ -302,6 +309,9 @@ func (pool *BlockPool) SetPeerRange(peerID p2p.ID, base int64, height int64) {
 
 	if height > pool.maxPeerHeight {
 		pool.maxPeerHeight = height
+		if pool.backend != nil {
+			pool.backend.UpdateMaxPeerHeight(uint64(height))
+		}
 	}
 }
 
@@ -410,6 +420,7 @@ func (pool *BlockPool) sendError(err error, peerID p2p.ID) {
 }
 
 // for debugging purposes
+//
 //nolint:unused
 func (pool *BlockPool) debug() string {
 	pool.mtx.Lock()

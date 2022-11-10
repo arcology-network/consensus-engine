@@ -238,6 +238,20 @@ func LoadOrGenFilePV(keyFilePath, stateFilePath string) *FilePV {
 	return pv
 }
 
+func LoadOrGenFilePVEx(keyFilePath, stateFilePath string) *FilePV {
+	var pv *FilePV
+	if tmos.FileExists(keyFilePath) {
+		pv = LoadFilePV(keyFilePath, stateFilePath)
+		// FIXME
+		// This is a hot fix.
+		pv.LastSignState.Step = stepNone
+	} else {
+		pv = GenFilePV(keyFilePath, stateFilePath)
+		pv.Save()
+	}
+	return pv
+}
+
 // GetAddress returns the address of the validator.
 // Implements PrivValidator.
 func (pv *FilePV) GetAddress() types.Address {

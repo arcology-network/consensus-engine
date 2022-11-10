@@ -64,7 +64,13 @@ type Metrics struct {
 	// Total number of transactions processed.
 	TxsProcessed metrics.Counter
 	// The duration between two seccessive blocks.
-	BlockInterval metrics.Histogram
+	BlockInterval      metrics.Histogram
+	BlockIntervalGauge metrics.Gauge
+	// Real time TPS.
+	RealTimeTPS metrics.Gauge
+	// The time used on reaching consensus.
+	ReachingConsensusSeconds      metrics.Histogram
+	ReachingConsensusSecondsGauge metrics.Gauge
 }
 
 // PrometheusMetrics returns Metrics build using Prometheus client library.
@@ -196,10 +202,30 @@ func PrometheusMetrics(namespace string, labelsAndValues ...string) *Metrics {
 			Name:      "processed_txs_total",
 			Help:      "Total number of transactions processed",
 		}, labels).With(labelsAndValues...),
-		BlockInterval: prometheus.NewHistogramFrom(stdprometheus.HistogramOpts{
+		BlockInterval: prometheus.NewSummaryFrom(stdprometheus.SummaryOpts{
 			Subsystem: MetricsSubsystem,
 			Name:      "block_interval_seconds",
 			Help:      "The duration between two seccessive blocks",
+		}, labels).With(labelsAndValues...),
+		BlockIntervalGauge: prometheus.NewGaugeFrom(stdprometheus.GaugeOpts{
+			Subsystem: MetricsSubsystem,
+			Name:      "block_interval_seconds_gauge",
+			Help:      "The duration between two seccessive blocks",
+		}, labels).With(labelsAndValues...),
+		RealTimeTPS: prometheus.NewGaugeFrom(stdprometheus.GaugeOpts{
+			Subsystem: MetricsSubsystem,
+			Name:      "real_time_tps",
+			Help:      "Real time TPS",
+		}, labels).With(labelsAndValues...),
+		ReachingConsensusSeconds: prometheus.NewSummaryFrom(stdprometheus.SummaryOpts{
+			Subsystem: MetricsSubsystem,
+			Name:      "reaching_consensus_seconds",
+			Help:      "The time used on reaching consensus.",
+		}, labels).With(labelsAndValues...),
+		ReachingConsensusSecondsGauge: prometheus.NewGaugeFrom(stdprometheus.GaugeOpts{
+			Subsystem: MetricsSubsystem,
+			Name:      "reaching_consensus_seconds_gauge",
+			Help:      "The time used on reaching consensus.",
 		}, labels).With(labelsAndValues...),
 	}
 }
@@ -224,14 +250,18 @@ func NopMetrics() *Metrics {
 
 		BlockIntervalSeconds: discard.NewHistogram(),
 
-		NumTxs:          discard.NewGauge(),
-		BlockSizeBytes:  discard.NewGauge(),
-		TotalTxs:        discard.NewGauge(),
-		CommittedHeight: discard.NewGauge(),
-		FastSyncing:     discard.NewGauge(),
-		StateSyncing:    discard.NewGauge(),
-		BlockParts:      discard.NewCounter(),
-		TxsProcessed:    discard.NewCounter(),
-		BlockInterval:   discard.NewHistogram(),
+		NumTxs:                        discard.NewGauge(),
+		BlockSizeBytes:                discard.NewGauge(),
+		TotalTxs:                      discard.NewGauge(),
+		CommittedHeight:               discard.NewGauge(),
+		FastSyncing:                   discard.NewGauge(),
+		StateSyncing:                  discard.NewGauge(),
+		BlockParts:                    discard.NewCounter(),
+		TxsProcessed:                  discard.NewCounter(),
+		BlockInterval:                 discard.NewHistogram(),
+		BlockIntervalGauge:            discard.NewGauge(),
+		RealTimeTPS:                   discard.NewGauge(),
+		ReachingConsensusSeconds:      discard.NewHistogram(),
+		ReachingConsensusSecondsGauge: discard.NewGauge(),
 	}
 }

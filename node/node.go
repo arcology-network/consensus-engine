@@ -136,12 +136,12 @@ type fastSyncReactor interface {
 // WARNING: using any name from the below list of the existing reactors will
 // result in replacing it with the custom one.
 //
-//  - MEMPOOL
-//  - BLOCKCHAIN
-//  - CONSENSUS
-//  - EVIDENCE
-//  - PEX
-//  - STATESYNC
+//   - MEMPOOL
+//   - BLOCKCHAIN
+//   - CONSENSUS
+//   - EVIDENCE
+//   - PEX
+//   - STATESYNC
 func CustomReactors(reactors map[string]p2p.Reactor) Option {
 	return func(n *Node) {
 		for name, reactor := range reactors {
@@ -187,9 +187,9 @@ type Node struct {
 	// services
 	eventBus          *types.EventBus // pub/sub for services
 	stateStore        sm.Store
-	blockStore        *store.BlockStore // store the blockchain to disk
-	bcReactor         p2p.Reactor       // for fast-syncing
-	mempoolReactor    *mempl.Reactor    // for gossipping transactions
+	blockStore        sm.BlockStore  // store the blockchain to disk
+	bcReactor         p2p.Reactor    // for fast-syncing
+	mempoolReactor    *mempl.Reactor // for gossipping transactions
 	mempool           mempl.Mempool
 	stateSync         bool                    // whether the node should state sync on startup
 	stateSyncReactor  *statesync.Reactor      // for hosting and restoring state sync snapshots
@@ -336,7 +336,7 @@ func createMempoolAndMempoolReactor(config *cfg.Config, proxyApp proxy.AppConns,
 }
 
 func createEvidenceReactor(config *cfg.Config, dbProvider DBProvider,
-	stateDB dbm.DB, blockStore *store.BlockStore, logger log.Logger) (*evidence.Reactor, *evidence.Pool, error) {
+	stateDB dbm.DB, blockStore sm.BlockStore, logger log.Logger) (*evidence.Reactor, *evidence.Pool, error) {
 
 	evidenceDB, err := dbProvider(&DBContext{"evidence", config})
 	if err != nil {
@@ -362,6 +362,30 @@ func createBlockchainReactor(config *cfg.Config,
 	switch config.FastSync.Version {
 	case "v0":
 		bcReactor = bcv0.NewBlockchainReactor(state.Copy(), blockExec, blockStore, fastSync)
+	case "v1":
+		bcReactor = bcv1.NewBlockchainReactor(state.Copy(), blockExec, blockStore, fastSync)
+	case "v2":
+		bcReactor = bcv2.NewBlockchainReactor(state.Copy(), blockExec, blockStore, fastSync)
+	default:
+		return nil, fmt.Errorf("unknown fastsync version %s", config.FastSync.Version)
+	}
+
+	bcReactor.SetLogger(logger.With("module", "blockchain"))
+	return bcReactor, nil
+}
+
+func createBlockchainReactorEx(config *cfg.Config,
+	state sm.State,
+	blockExec *sm.BlockExecutor,
+	blockStore sm.BlockStore,
+	fastSync bool,
+	backend monaco.BackendProxy,
+	logger log.Logger) (bcReactor p2p.Reactor, err error) {
+
+	switch config.FastSync.Version {
+	case "v0":
+		bcReactor = bcv0.NewBlockchainReactorEx(state.Copy(), blockExec, blockStore, fastSync)
+		bcReactor.(*bcv0.BlockchainReactor).SetBackendProxy(backend)
 	case "v1":
 		bcReactor = bcv1.NewBlockchainReactor(state.Copy(), blockExec, blockStore, fastSync)
 	case "v2":
@@ -560,7 +584,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, config *cfg.Config,
 // startStateSync starts an asynchronous state sync process, then switches to fast sync mode.
 func startStateSync(ssR *statesync.Reactor, bcR fastSyncReactor, conR *cs.Reactor,
 	stateProvider statesync.StateProvider, config *cfg.StateSyncConfig, fastSync bool,
-	stateStore sm.Store, blockStore *store.BlockStore, state sm.State) error {
+	stateStore sm.Store, blockStore sm.BlockStore, state sm.State) error {
 	ssR.Logger.Info("Starting state sync")
 
 	if stateProvider == nil {
@@ -852,14 +876,15 @@ func NewNodeEx(config *cfg.Config,
 	backend monaco.BackendProxy,
 	options ...Option) (*Node, error) {
 
-	blockStore, stateDB, err := initDBs(config, dbProvider)
+	_, stateDB, err := initDBs(config, dbProvider)
+	blockStore := backend.CreateBlockStore()
 	if err != nil {
 		return nil, err
 	}
 
-	stateStore := sm.NewStore(stateDB)
+	stateStore := backend.CreateStateStore().(sm.Store)
 
-	state, genDoc, err := LoadStateFromDBOrGenesisDocProvider(stateDB, genesisDocProvider)
+	state, genDoc, err := LoadStateFromDBOrGenesisDocProviderEx(stateDB, genesisDocProvider, stateStore)
 	if err != nil {
 		return nil, err
 	}
@@ -910,19 +935,20 @@ func NewNodeEx(config *cfg.Config,
 	// Create the handshaker, which calls RequestInfo, sets the AppVersion on the state,
 	// and replays any blocks as necessary to sync tendermint with the app.
 	consensusLogger := logger.With("module", "consensus")
-	if !stateSync {
-		if err := doHandshake(stateStore, state, blockStore, genDoc, eventBus, proxyApp, consensusLogger); err != nil {
-			return nil, err
-		}
+	// Skip handshake process, because we keep the consistency between consensus and internal storage ourselves.
+	// if !stateSync {
+	// 	if err := doHandshake(stateStore, state, blockStore, genDoc, eventBus, proxyApp, consensusLogger); err != nil {
+	// 		return nil, err
+	// 	}
 
-		// Reload the state. It will have the Version.Consensus.App set by the
-		// Handshake, and may have other modifications as well (ie. depending on
-		// what happened during block replay).
-		state, err = stateStore.Load()
-		if err != nil {
-			return nil, fmt.Errorf("cannot load state: %w", err)
-		}
-	}
+	// 	// Reload the state. It will have the Version.Consensus.App set by the
+	// 	// Handshake, and may have other modifications as well (ie. depending on
+	// 	// what happened during block replay).
+	// 	state, err = stateStore.Load()
+	// 	if err != nil {
+	// 		return nil, fmt.Errorf("cannot load state: %w", err)
+	// 	}
+	// }
 
 	// Determine whether we should do fast sync. This must happen after the handshake, since the
 	// app may modify the validator set, specifying ourself as the only validator.
@@ -954,7 +980,7 @@ func NewNodeEx(config *cfg.Config,
 	blockExec.SetBackendProxy(backend)
 
 	// Make BlockchainReactor. Don't start fast sync if we're doing a state sync first.
-	bcReactor, err := createBlockchainReactor(config, state, blockExec, blockStore, fastSync && !stateSync, logger)
+	bcReactor, err := createBlockchainReactorEx(config, state, blockExec, blockStore, fastSync && !stateSync, backend, logger)
 	if err != nil {
 		return nil, fmt.Errorf("could not create blockchain reactor: %w", err)
 	}
@@ -970,6 +996,7 @@ func NewNodeEx(config *cfg.Config,
 		config, state, blockExec, blockStore, mempool, evidencePool,
 		privValidator, csMetrics, stateSync || fastSync, eventBus, consensusLogger,
 	)
+	consensusReactor.SetBackendProxy(backend)
 
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> fast sync -> consensus) is very messy,
@@ -1371,7 +1398,7 @@ func (n *Node) Switch() *p2p.Switch {
 }
 
 // BlockStore returns the Node's BlockStore.
-func (n *Node) BlockStore() *store.BlockStore {
+func (n *Node) BlockStore() sm.BlockStore {
 	return n.blockStore
 }
 
@@ -1538,6 +1565,31 @@ func LoadStateFromDBOrGenesisDocProvider(
 		}
 	}
 	stateStore := sm.NewStore(stateDB)
+	state, err := stateStore.LoadFromDBOrGenesisDoc(genDoc)
+	if err != nil {
+		return sm.State{}, nil, err
+	}
+	return state, genDoc, nil
+}
+
+func LoadStateFromDBOrGenesisDocProviderEx(
+	stateDB dbm.DB,
+	genesisDocProvider GenesisDocProvider,
+	stateStore sm.Store,
+) (sm.State, *types.GenesisDoc, error) {
+	// Get genesis doc
+	genDoc, err := loadGenesisDoc(stateDB)
+	if err != nil {
+		genDoc, err = genesisDocProvider()
+		if err != nil {
+			return sm.State{}, nil, err
+		}
+		// save genesis doc to prevent a certain class of user errors (e.g. when it
+		// was changed, accidentally or not). Also good for audit trail.
+		if err := saveGenesisDoc(stateDB, genDoc); err != nil {
+			return sm.State{}, nil, err
+		}
+	}
 	state, err := stateStore.LoadFromDBOrGenesisDoc(genDoc)
 	if err != nil {
 		return sm.State{}, nil, err

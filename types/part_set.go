@@ -7,12 +7,15 @@ import (
 	"io"
 
 	"github.com/arcology-network/consensus-engine/crypto/merkle"
+	"github.com/arcology-network/consensus-engine/encoding"
 	"github.com/arcology-network/consensus-engine/libs/bits"
 	tmbytes "github.com/arcology-network/consensus-engine/libs/bytes"
 	tmjson "github.com/arcology-network/consensus-engine/libs/json"
 	tmmath "github.com/arcology-network/consensus-engine/libs/math"
 	tmsync "github.com/arcology-network/consensus-engine/libs/sync"
+	tmprotobits "github.com/arcology-network/consensus-engine/proto/tendermint/libs/bits"
 	tmproto "github.com/arcology-network/consensus-engine/proto/tendermint/types"
+	"github.com/gogo/protobuf/proto"
 )
 
 var (
@@ -213,6 +216,68 @@ func (ps *PartSet) Header() PartSetHeader {
 		Total: ps.total,
 		Hash:  ps.hash,
 	}
+}
+
+func (this *PartSet) GobEncode() ([]byte, error) {
+
+	partDatas := make([][]byte, len(this.parts))
+	for i := range this.parts {
+		part, err := this.parts[i].ToProto()
+		if err != nil {
+			panic("ToProto Err: %v" + err.Error())
+		}
+		partsData, err := proto.Marshal(part)
+		if err != nil {
+			panic("encode part Err: %v" + err.Error())
+		}
+		partDatas[i] = partsData
+	}
+	partsBitArrayData, err := proto.Marshal(this.partsBitArray.ToProto())
+	if err != nil {
+		panic("encode PartSet Err: %v" + err.Error())
+	}
+	data := [][]byte{
+		encoding.Uint32(this.total).Encode(),
+		this.hash,
+		encoding.Byteset(partDatas).Encode(),
+		partsBitArrayData,
+		encoding.Uint32(this.count).Encode(),
+		encoding.Int64(this.byteSize).Encode(),
+	}
+	return encoding.Byteset(data).Encode(), nil
+}
+
+func (this *PartSet) GobDecode(data []byte) error {
+	fields := encoding.Byteset{}.Decode(data)
+
+	this.total = encoding.Uint32(this.total).Decode(fields[0])
+	this.hash = fields[1]
+
+	fieldparts := encoding.Byteset{}.Decode(fields[2])
+	parts := make([]*Part, len(fieldparts))
+	for i := range parts {
+		pb := new(tmproto.Part)
+		if err := proto.Unmarshal(fieldparts[i], pb); err != nil {
+			panic("decode Part Err: %v" + err.Error())
+		}
+		npb, err := PartFromProto(pb)
+		if err != nil {
+			panic("PartFromProto Part Err: %v" + err.Error())
+		}
+		parts[i] = npb
+	}
+	this.parts = parts
+
+	bip := new(tmprotobits.BitArray)
+	if err := proto.Unmarshal(fields[3], bip); err != nil {
+		panic("decode BitArray Err: %v" + err.Error())
+	}
+	this.partsBitArray = &bits.BitArray{} //bits.NewBitArray(0)
+	this.partsBitArray.FromProto(bip)
+
+	this.count = encoding.Uint32(this.count).Decode(fields[4])
+	this.byteSize = int64(encoding.Int64(this.byteSize).Decode(fields[5]).(encoding.Int64))
+	return nil
 }
 
 func (ps *PartSet) HasHeader(header PartSetHeader) bool {

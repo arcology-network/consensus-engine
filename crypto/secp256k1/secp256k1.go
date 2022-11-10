@@ -15,7 +15,7 @@ import (
 	tmjson "github.com/arcology-network/consensus-engine/libs/json"
 )
 
-//-------------------------------------
+// -------------------------------------
 const (
 	PrivKeyName = "tendermint/PrivKeySecp256k1"
 	PubKeyName  = "tendermint/PubKeySecp256k1"

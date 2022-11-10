@@ -30,7 +30,7 @@ func (bm *BackendMock) Reap(int64, int64) ([][]byte, [][]byte) {
 		}
 }
 
-func (bm *BackendMock) AddToMempool(txs [][]byte) {
+func (bm *BackendMock) AddToMempool(txs [][]byte, _ string) {
 	bm.logger.Debug("AddToMempool", "txs", txs)
 	bm.txs = txs
 }
@@ -42,4 +42,8 @@ func (bm *BackendMock) ApplyTxsSync(height int64, coinbase []byte, timestamp tim
 
 func (bm *BackendMock) GetLocalTxsChan() chan [][]byte {
 	return bm.ch
+}
+
+func (bm *BackendMock) GetTxsOnBlock(height uint64) ([][]byte, error) {
+	return nil, nil
 }

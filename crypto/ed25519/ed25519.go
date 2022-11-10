@@ -3,6 +3,7 @@ package ed25519
 import (
 	"bytes"
 	"crypto/subtle"
+	"encoding/gob"
 	"fmt"
 	"io"
 
@@ -37,6 +38,7 @@ const (
 func init() {
 	tmjson.RegisterType(PubKey{}, PubKeyName)
 	tmjson.RegisterType(PrivKey{}, PrivKeyName)
+	gob.Register(PubKey{})
 }
 
 // PrivKey implements crypto.PrivKey.

@@ -96,6 +96,11 @@ func (pc peerConn) RemoteIP() net.IP {
 	return pc.ip
 }
 
+type msg struct {
+	channel byte
+	bytes   []byte
+}
+
 // peer implements Peer.
 //
 // Before using a peer, you will need to perform a handshake on connection.
@@ -117,6 +122,9 @@ type peer struct {
 
 	metrics       *Metrics
 	metricsTicker *time.Ticker
+
+	msgChan      chan msg
+	reactorsByCh map[byte]Reactor
 }
 
 type PeerOption func(*peer)
@@ -137,6 +145,8 @@ func newPeer(
 		Data:          cmap.NewCMap(),
 		metricsTicker: time.NewTicker(metricsTickerDuration),
 		metrics:       NopMetrics(),
+		msgChan:       make(chan msg, 1000),
+		reactorsByCh:  reactorsByCh,
 	}
 
 	p.mconn = createMConnection(
@@ -146,6 +156,7 @@ func newPeer(
 		chDescs,
 		onPeerError,
 		mConfig,
+		p.msgChan,
 	)
 	p.BaseService = *service.NewBaseService(nil, "Peer", p)
 	for _, option := range options {
@@ -184,6 +195,24 @@ func (p *peer) OnStart() error {
 	}
 
 	go p.metricsReporter()
+
+	go func() {
+		for m := range p.msgChan {
+			chID, msgBytes := m.channel, m.bytes
+			reactor := p.reactorsByCh[chID]
+			if reactor == nil {
+				// Note that its ok to panic here as it's caught in the conn._recover,
+				// which does onPeerError.
+				panic(fmt.Sprintf("Unknown channel %X", chID))
+			}
+			labels := []string{
+				"peer_id", string(p.ID()),
+				"chID", fmt.Sprintf("%#x", chID),
+			}
+			p.metrics.PeerReceiveBytesTotal.With(labels...).Add(float64(len(msgBytes)))
+			reactor.Receive(chID, p, msgBytes)
+		}
+	}()
 	return nil
 }
 
@@ -191,6 +220,7 @@ func (p *peer) OnStart() error {
 // .Send() calls will get flushed before closing the connection.
 // NOTE: it is not safe to call this method more than once.
 func (p *peer) FlushStop() {
+	close(p.msgChan)
 	p.metricsTicker.Stop()
 	p.BaseService.OnStop()
 	p.mconn.FlushStop() // stop everything and close the conn
@@ -198,6 +228,7 @@ func (p *peer) FlushStop() {
 
 // OnStop implements BaseService.
 func (p *peer) OnStop() {
+	close(p.msgChan)
 	p.metricsTicker.Stop()
 	p.BaseService.OnStop()
 	if err := p.mconn.Stop(); err != nil { // stop everything and close the conn
@@ -373,21 +404,31 @@ func createMConnection(
 	chDescs []*tmconn.ChannelDescriptor,
 	onPeerError func(Peer, interface{}),
 	config tmconn.MConnConfig,
+	msgChan chan msg,
 ) *tmconn.MConnection {
 
 	onReceive := func(chID byte, msgBytes []byte) {
-		reactor := reactorsByCh[chID]
-		if reactor == nil {
-			// Note that its ok to panic here as it's caught in the conn._recover,
-			// which does onPeerError.
-			panic(fmt.Sprintf("Unknown channel %X", chID))
+		if chID == byte(0x30) {
+			reactor := reactorsByCh[chID]
+			if reactor == nil {
+				// Note that its ok to panic here as it's caught in the conn._recover,
+				// which does onPeerError.
+				panic(fmt.Sprintf("Unknown channel %X", chID))
+			}
+			labels := []string{
+				"peer_id", string(p.ID()),
+				"chID", fmt.Sprintf("%#x", chID),
+			}
+			p.metrics.PeerReceiveBytesTotal.With(labels...).Add(float64(len(msgBytes)))
+			reactor.Receive(chID, p, msgBytes)
+		} else {
+			bytesCopy := make([]byte, len(msgBytes))
+			copy(bytesCopy, msgBytes)
+			msgChan <- msg{
+				channel: chID,
+				bytes:   bytesCopy,
+			}
 		}
-		labels := []string{
-			"peer_id", string(p.ID()),
-			"chID", fmt.Sprintf("%#x", chID),
-		}
-		p.metrics.PeerReceiveBytesTotal.With(labels...).Add(float64(len(msgBytes)))
-		reactor.Receive(chID, p, msgBytes)
 	}
 
 	onError := func(r interface{}) {
