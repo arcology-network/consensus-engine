@@ -13,13 +13,19 @@ import (
 	"github.com/arcology-network/consensus-engine/types"
 )
 
+type saveBlockRequest struct {
+	block      *types.Block
+	blockParts *types.PartSet
+	seenCommit *types.Commit
+}
+
 /*
 BlockStore is a simple low level store for blocks.
 
 There are three types of information stored:
- - BlockMeta:   Meta information about each block
- - Block part:  Parts of each block, aggregated w/ PartSet
- - Commit:      The commit part of each block, for gossiping precommit votes
+  - BlockMeta:   Meta information about each block
+  - Block part:  Parts of each block, aggregated w/ PartSet
+  - Commit:      The commit part of each block, for gossiping precommit votes
 
 Currently the precommit signatures are duplicated in the Block parts as
 well as the Commit.  In the future this may change, perhaps by moving
@@ -41,17 +47,28 @@ type BlockStore struct {
 	mtx    tmsync.RWMutex
 	base   int64
 	height int64
+
+	blocksToSave chan saveBlockRequest
 }
 
 // NewBlockStore returns a new BlockStore with the given DB,
 // initialized to the last height that was committed to the DB.
 func NewBlockStore(db dbm.DB) *BlockStore {
 	bs := LoadBlockStoreState(db)
-	return &BlockStore{
-		base:   bs.Base,
-		height: bs.Height,
-		db:     db,
+	blockStore := &BlockStore{
+		base:         bs.Base,
+		height:       bs.Height,
+		db:           db,
+		blocksToSave: make(chan saveBlockRequest, 1),
 	}
+
+	go func() {
+		for request := range blockStore.blocksToSave {
+			blockStore.SaveBlock(request.block, request.blockParts, request.seenCommit)
+		}
+	}()
+
+	return blockStore
 }
 
 // Base returns the first known contiguous block height, or 0 for empty block stores.
@@ -322,12 +339,21 @@ func (bs *BlockStore) PruneBlocks(height int64) (uint64, error) {
 	return pruned, nil
 }
 
+func (bs *BlockStore) SaveBlockAsync(block *types.Block, blockParts *types.PartSet, seenCommit *types.Commit) {
+	bs.blocksToSave <- saveBlockRequest{
+		block:      block,
+		blockParts: blockParts,
+		seenCommit: seenCommit,
+	}
+}
+
 // SaveBlock persists the given block, blockParts, and seenCommit to the underlying db.
 // blockParts: Must be parts of the block
 // seenCommit: The +2/3 precommits that were seen which committed at height.
-//             If all the nodes restart after committing a block,
-//             we need this to reload the precommits to catch-up nodes to the
-//             most recent height.  Otherwise they'd stall at H-1.
+//
+//	If all the nodes restart after committing a block,
+//	we need this to reload the precommits to catch-up nodes to the
+//	most recent height.  Otherwise they'd stall at H-1.
 func (bs *BlockStore) SaveBlock(block *types.Block, blockParts *types.PartSet, seenCommit *types.Commit) {
 	if block == nil {
 		panic("BlockStore can only save a non-nil block")
@@ -337,6 +363,73 @@ func (bs *BlockStore) SaveBlock(block *types.Block, blockParts *types.PartSet, s
 	hash := block.Hash()
 
 	if g, w := height, bs.Height()+1; bs.Base() > 0 && g != w {
+		panic(fmt.Sprintf("BlockStore can only save contiguous blocks. Wanted %v, got %v", w, g))
+	}
+	if !blockParts.IsComplete() {
+		panic("BlockStore can only save complete block part sets")
+	}
+
+	// Save block parts. This must be done before the block meta, since callers
+	// typically load the block meta first as an indication that the block exists
+	// and then go on to load block parts - we must make sure the block is
+	// complete as soon as the block meta is written.
+	for i := 0; i < int(blockParts.Total()); i++ {
+		part := blockParts.GetPart(i)
+		bs.saveBlockPart(height, i, part)
+	}
+
+	// Save block meta
+	blockMeta := types.NewBlockMeta(block, blockParts)
+	pbm := blockMeta.ToProto()
+	if pbm == nil {
+		panic("nil blockmeta")
+	}
+	metaBytes := mustEncode(pbm)
+	if err := bs.db.Set(calcBlockMetaKey(height), metaBytes); err != nil {
+		panic(err)
+	}
+	if err := bs.db.Set(calcBlockHashKey(hash), []byte(fmt.Sprintf("%d", height))); err != nil {
+		panic(err)
+	}
+
+	// Save block commit (duplicate and separate from the Block)
+	pbc := block.LastCommit.ToProto()
+	blockCommitBytes := mustEncode(pbc)
+	if err := bs.db.Set(calcBlockCommitKey(height-1), blockCommitBytes); err != nil {
+		panic(err)
+	}
+
+	// Save seen commit (seen +2/3 precommits for block)
+	// NOTE: we can delete this at a later height
+	pbsc := seenCommit.ToProto()
+	seenCommitBytes := mustEncode(pbsc)
+	if err := bs.db.Set(calcSeenCommitKey(height), seenCommitBytes); err != nil {
+		panic(err)
+	}
+
+	// Done!
+	bs.mtx.Lock()
+	bs.height = height
+	if bs.base == 0 {
+		bs.base = height
+	}
+	bs.mtx.Unlock()
+
+	// Save new BlockStoreState descriptor. This also flushes the database.
+	bs.saveState()
+}
+
+// SaveBlockEx is used in TmBlockStore only.
+func (bs *BlockStore) SaveBlockEx(block *types.Block, blockParts *types.PartSet, seenCommit *types.Commit) {
+	if block == nil {
+		panic("BlockStore can only save a non-nil block")
+	}
+
+	height := block.Height
+	hash := block.Hash()
+
+	// Overwrite the last block is not an error for monaco.
+	if g, w := height, bs.Height()+1; bs.Base() > 0 && g != w && g+1 != w {
 		panic(fmt.Sprintf("BlockStore can only save contiguous blocks. Wanted %v, got %v", w, g))
 	}
 	if !blockParts.IsComplete() {

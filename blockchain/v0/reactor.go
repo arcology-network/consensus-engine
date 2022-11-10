@@ -7,10 +7,12 @@ import (
 
 	bc "github.com/arcology-network/consensus-engine/blockchain"
 	"github.com/arcology-network/consensus-engine/libs/log"
+	"github.com/arcology-network/consensus-engine/mempool"
+	"github.com/arcology-network/consensus-engine/monaco"
 	"github.com/arcology-network/consensus-engine/p2p"
 	bcproto "github.com/arcology-network/consensus-engine/proto/tendermint/blockchain"
+	protomem "github.com/arcology-network/consensus-engine/proto/tendermint/mempool"
 	sm "github.com/arcology-network/consensus-engine/state"
-	"github.com/arcology-network/consensus-engine/store"
 	"github.com/arcology-network/consensus-engine/types"
 )
 
@@ -53,16 +55,18 @@ type BlockchainReactor struct {
 	initialState sm.State
 
 	blockExec *sm.BlockExecutor
-	store     *store.BlockStore
+	store     sm.BlockStore
 	pool      *BlockPool
 	fastSync  bool
 
 	requestsCh <-chan BlockRequest
 	errorsCh   <-chan peerError
+
+	backend monaco.BackendProxy
 }
 
 // NewBlockchainReactor returns new reactor instance.
-func NewBlockchainReactor(state sm.State, blockExec *sm.BlockExecutor, store *store.BlockStore,
+func NewBlockchainReactor(state sm.State, blockExec *sm.BlockExecutor, store sm.BlockStore,
 	fastSync bool) *BlockchainReactor {
 
 	if state.LastBlockHeight != store.Height() {
@@ -92,6 +96,43 @@ func NewBlockchainReactor(state sm.State, blockExec *sm.BlockExecutor, store *st
 	}
 	bcR.BaseReactor = *p2p.NewBaseReactor("BlockchainReactor", bcR)
 	return bcR
+}
+
+func NewBlockchainReactorEx(state sm.State, blockExec *sm.BlockExecutor, store sm.BlockStore,
+	fastSync bool) *BlockchainReactor {
+
+	if state.LastBlockHeight != store.Height() && state.LastBlockHeight+1 != store.Height() {
+		panic(fmt.Sprintf("state (%v) and store (%v) height mismatch", state.LastBlockHeight,
+			store.Height()))
+	}
+
+	requestsCh := make(chan BlockRequest, maxTotalRequesters)
+
+	const capacity = 1000                      // must be bigger than peers count
+	errorsCh := make(chan peerError, capacity) // so we don't block in #Receive#pool.AddBlock
+
+	startHeight := state.LastBlockHeight + 1
+	if startHeight == 1 {
+		startHeight = state.InitialHeight
+	}
+	pool := NewBlockPool(startHeight, requestsCh, errorsCh)
+
+	bcR := &BlockchainReactor{
+		initialState: state,
+		blockExec:    blockExec,
+		store:        store,
+		pool:         pool,
+		fastSync:     fastSync,
+		requestsCh:   requestsCh,
+		errorsCh:     errorsCh,
+	}
+	bcR.BaseReactor = *p2p.NewBaseReactor("BlockchainReactor", bcR)
+	return bcR
+}
+
+func (bcR *BlockchainReactor) SetBackendProxy(backend monaco.BackendProxy) {
+	bcR.backend = backend
+	bcR.pool.SetBackendProxy(backend)
 }
 
 // SetLogger implements service.Service by setting the logger on reactor and pool.
@@ -176,7 +217,36 @@ func (bcR *BlockchainReactor) respondToPeer(msg *bcproto.BlockRequest,
 	src p2p.Peer) (queued bool) {
 
 	block := bcR.store.LoadBlock(msg.Height)
-	if block != nil {
+	txs, err := bcR.backend.GetTxsOnBlock(uint64(msg.Height))
+	if block != nil && err == nil {
+		if len(txs) != 0 {
+			TxsPerBatch := 5000
+			numBatch := len(txs) / TxsPerBatch
+			if len(txs)%TxsPerBatch != 0 {
+				numBatch++
+			}
+
+			for i := 0; i < numBatch; i++ {
+				batchEnd := (i + 1) * TxsPerBatch
+				if i == numBatch-1 {
+					batchEnd = len(txs)
+				}
+
+				msg := protomem.Message{
+					Sum: &protomem.Message_Txs{
+						Txs: &protomem.Txs{Txs: txs[i*TxsPerBatch : batchEnd]},
+					},
+				}
+				bz, err := msg.Marshal()
+				if err != nil {
+					panic(err)
+				}
+				if !src.Send(mempool.MempoolChannel, bz) {
+					return false
+				}
+			}
+		}
+
 		bl, err := block.ToProto()
 		if err != nil {
 			bcR.Logger.Error("could not convert msg to protobuf", "err", err)
@@ -392,10 +462,18 @@ FOR_LOOP:
 				// TODO: batch saves so we dont persist to disk every block
 				bcR.store.SaveBlock(first, firstParts, second.LastCommit)
 
+				if len(first.Data.Txs) > 0 {
+					txs := make([][]byte, len(first.Data.Txs))
+					for i := range txs {
+						txs[i] = first.Data.Txs[i]
+					}
+					bcR.backend.AddToMempool(txs, "blockchain")
+				}
+
 				// TODO: same thing for app - but we would need a way to
 				// get the hash without persisting the state
 				var err error
-				state, _, err = bcR.blockExec.ApplyBlock(state, firstID, first)
+				state, _, err = bcR.blockExec.ApplyBlockEx(state, firstID, first, true)
 				if err != nil {
 					// TODO This is bad, are we zombie?
 					panic(fmt.Sprintf("Failed to process committed block (%d:%X): %v", first.Height, first.Hash(), err))

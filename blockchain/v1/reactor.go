@@ -11,7 +11,6 @@ import (
 	"github.com/arcology-network/consensus-engine/p2p"
 	bcproto "github.com/arcology-network/consensus-engine/proto/tendermint/blockchain"
 	sm "github.com/arcology-network/consensus-engine/state"
-	"github.com/arcology-network/consensus-engine/store"
 	"github.com/arcology-network/consensus-engine/types"
 )
 
@@ -47,7 +46,7 @@ type BlockchainReactor struct {
 	state        sm.State
 
 	blockExec *sm.BlockExecutor
-	store     *store.BlockStore
+	store     sm.BlockStore
 
 	fastSync    bool
 	stateSynced bool
@@ -70,7 +69,7 @@ type BlockchainReactor struct {
 }
 
 // NewBlockchainReactor returns new reactor instance.
-func NewBlockchainReactor(state sm.State, blockExec *sm.BlockExecutor, store *store.BlockStore,
+func NewBlockchainReactor(state sm.State, blockExec *sm.BlockExecutor, store sm.BlockStore,
 	fastSync bool) *BlockchainReactor {
 
 	if state.LastBlockHeight != store.Height() {
@@ -534,8 +533,8 @@ func (bcR *BlockchainReactor) switchToConsensus() {
 // Called by FSM and pool:
 // - pool calls when it detects slow peer or when peer times out
 // - FSM calls when:
-//    - adding a block (addBlock) fails
-//    - reactor processing of a block reports failure and FSM sends back the peers of first and second blocks
+//   - adding a block (addBlock) fails
+//   - reactor processing of a block reports failure and FSM sends back the peers of first and second blocks
 func (bcR *BlockchainReactor) sendPeerError(err error, peerID p2p.ID) {
 	bcR.Logger.Info("sendPeerError:", "peer", peerID, "error", err)
 	msgData := bcFsmMessage{

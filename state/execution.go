@@ -1,6 +1,7 @@
 package state
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"time"
@@ -142,6 +143,12 @@ func (blockExec *BlockExecutor) CreateProposalBlockEx(
 // Validation does not mutate state, but does require historical information from the stateDB,
 // ie. to verify evidence from a validator at an old height.
 func (blockExec *BlockExecutor) ValidateBlock(state State, block *types.Block) error {
+	// FIXME
+	if len(state.AppHash) == 0 || bytes.Equal(state.AppHash, make([]byte, 32)) {
+		fmt.Printf("[BlockExecutor.ApplyBlockEx] replace state.AppHash [%v] with block.AppHash [%v]\n", state.AppHash, block.AppHash)
+		state.AppHash = block.AppHash
+	}
+
 	err := validateBlock(state, block)
 	if err != nil {
 		return err
@@ -230,18 +237,26 @@ func (blockExec *BlockExecutor) ApplyBlock(
 }
 
 // AddToMempool is used in Monaco only.
-func (blockExec *BlockExecutor) AddToMempool(txs types.Txs) {
+func (blockExec *BlockExecutor) AddToMempool(txs types.Txs, src string) {
 	transactions := make([][]byte, len(txs))
 	for i := 0; i < len(txs); i++ {
 		transactions[i] = txs[i]
 	}
-	blockExec.backend.AddToMempool(transactions)
+	blockExec.backend.AddToMempool(transactions, src)
 }
 
 // ApplyBlockEx is used in Monaco only.
 func (blockExec *BlockExecutor) ApplyBlockEx(
-	state State, blockID types.BlockID, block *types.Block,
+	state State, blockID types.BlockID, block *types.Block, inSyncMode bool,
 ) (State, int64, error) {
+	fmt.Printf("[BlockExecutor.ApplyBlockEx] isSyncMode = %v\n", inSyncMode)
+	// Skip AppHash validation in block sync mode.
+	// if inSyncMode {
+	// FIXME
+	if len(state.AppHash) == 0 || bytes.Equal(state.AppHash, make([]byte, 32)) {
+		fmt.Printf("[BlockExecutor.ApplyBlockEx] replace state.AppHash [%v] with block.AppHash [%v]\n", state.AppHash, block.AppHash)
+		state.AppHash = block.AppHash
+	}
 
 	if err := validateBlock(state, block); err != nil {
 		return state, 0, ErrInvalidBlock(err)

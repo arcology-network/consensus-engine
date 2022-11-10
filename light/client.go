@@ -264,16 +264,16 @@ func (c *Client) restoreTrustedLightBlock() error {
 
 // if options.Height:
 //
-//     1) ahead of trustedLightBlock.Height => fetch light blocks (same height as
+//  1. ahead of trustedLightBlock.Height => fetch light blocks (same height as
 //     trustedLightBlock) from primary provider and check it's hash matches the
 //     trustedLightBlock's hash (if not, remove trustedLightBlock and all the light blocks
 //     before)
 //
-//     2) equals trustedLightBlock.Height => check options.Hash matches the
+//  2. equals trustedLightBlock.Height => check options.Hash matches the
 //     trustedLightBlock's hash (if not, remove trustedLightBlock and all the light blocks
 //     before)
 //
-//     3) behind trustedLightBlock.Height => remove all the light blocks between
+//  3. behind trustedLightBlock.Height => remove all the light blocks between
 //     options.Height and trustedLightBlock.Height, update trustedLightBlock, then
 //     check options.Hash matches the trustedLightBlock's hash (if not, remove
 //     trustedLightBlock and all the light blocks before)
@@ -375,10 +375,10 @@ func (c *Client) initializeWithTrustOptions(ctx context.Context, options TrustOp
 // TrustedLightBlock returns a trusted light block at the given height (0 - the latest).
 //
 // It returns an error if:
-//  - there are some issues with the trusted store, although that should not
-//  happen normally;
-//  - negative height is passed;
-//  - header has not been verified yet and is therefore not in the store
+//   - there are some issues with the trusted store, although that should not
+//     happen normally;
+//   - negative height is passed;
+//   - header has not been verified yet and is therefore not in the store
 //
 // Safe for concurrent use by multiple goroutines.
 func (c *Client) TrustedLightBlock(height int64) (*types.LightBlock, error) {
@@ -490,8 +490,9 @@ func (c *Client) VerifyLightBlockAtHeight(ctx context.Context, height int64, now
 //
 // If the header, which is older than the currently trusted header, is
 // requested and the light client does not have it, VerifyHeader will perform:
-//		a) verifySkipping verification if nearest trusted header is found & not expired
-//		b) backwards verification in all other cases
+//
+//	a) verifySkipping verification if nearest trusted header is found & not expired
+//	b) backwards verification in all other cases
 //
 // It returns ErrOldHeaderExpired if the latest trusted header expired.
 //

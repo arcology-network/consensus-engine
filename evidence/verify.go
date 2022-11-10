@@ -117,9 +117,9 @@ func (evpool *Pool) verify(evidence types.Evidence) error {
 
 // VerifyLightClientAttack verifies LightClientAttackEvidence against the state of the full node. This involves
 // the following checks:
-//     - the common header from the full node has at least 1/3 voting power which is also present in
-//       the conflicting header's commit
-//     - the nodes trusted header at the same height as the conflicting header has a different hash
+//   - the common header from the full node has at least 1/3 voting power which is also present in
+//     the conflicting header's commit
+//   - the nodes trusted header at the same height as the conflicting header has a different hash
 func VerifyLightClientAttack(e *types.LightClientAttackEvidence, commonHeader, trustedHeader *types.SignedHeader,
 	commonVals *types.ValidatorSet, now time.Time, trustPeriod time.Duration) error {
 	// In the case of lunatic attack we need to perform a single verification jump between the
@@ -158,10 +158,10 @@ func VerifyLightClientAttack(e *types.LightClientAttackEvidence, commonHeader, t
 
 // VerifyDuplicateVote verifies DuplicateVoteEvidence against the state of full node. This involves the
 // following checks:
-//      - the validator is in the validator set at the height of the evidence
-//      - the height, round, type and validator address of the votes must be the same
-//      - the block ID's must be different
-//      - The signatures must both be valid
+//   - the validator is in the validator set at the height of the evidence
+//   - the height, round, type and validator address of the votes must be the same
+//   - the block ID's must be different
+//   - The signatures must both be valid
 func VerifyDuplicateVote(e *types.DuplicateVoteEvidence, chainID string, valSet *types.ValidatorSet) error {
 	_, val := valSet.GetByAddress(e.VoteA.ValidatorAddress)
 	if val == nil {
