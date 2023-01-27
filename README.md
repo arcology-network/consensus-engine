@@ -1,4 +1,4 @@
-# consensus-engine (customized Tindermint consensus) 
-The consensus engine is based on Tindermint with some key upgrades. 
+# consensus-engine 
+The consensus engine is based on Tindermint consensus with some key upgrades. 
    * Improved concurrency
    * Optimized blockchain structure
