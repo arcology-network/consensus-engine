@@ -133,7 +133,7 @@ func (blockExec *BlockExecutor) CreateProposalBlockEx(
 	// Fetch a limited amount of valid txs
 	maxDataBytes := types.MaxDataBytes(maxBytes, evSize, state.Validators.Size())
 
-	txs, hashes := blockExec.backend.Reap(maxDataBytes, maxGas)
+	txs, hashes := blockExec.backend.Reap(maxDataBytes, maxGas, height)
 
 	return state.MakeBlockEx(height, txs, hashes, commit, evidence, proposerAddr)
 }
